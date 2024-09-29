@@ -28,6 +28,8 @@ function generateAliases() {
 
 	const localGames = [
 		"minesweeper",
+		"wordle",
+		"ball-maze"
 	];
 
 	localGames.forEach((id) => {
