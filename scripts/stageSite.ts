@@ -1,12 +1,11 @@
-import { ANSI } from "../packages/core/src/constants";
+import { ANSI } from "../packages/site/src/constants/_utils/utils.const";
 import { name } from "../package.json";
 import fs from "node:fs";
-import { BUILD_DIR } from "packages/demo/src/config/deploy.config";
+import { BUILD_DIR } from "../packages/site/src/config/deploy.config";
 import { resolve } from "node:path";
 
 const PACKAGES = [
-	{ source: `../packages/demo/${BUILD_DIR}`, path: "/" },
-	{ source: `../packages/docs/${BUILD_DIR}`, path: "/docs" }
+	{ source: `../packages/site/${BUILD_DIR}`, path: "/" },
 ];
 
 const TARGET = `../${BUILD_DIR}`;

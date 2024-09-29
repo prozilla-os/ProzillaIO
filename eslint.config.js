@@ -11,7 +11,7 @@ export default tseslint.config(
 	{
 		languageOptions: {
 			parserOptions: {
-				project: ["./tsconfig.json", "./packages/*/tsconfig.json", "./packages/apps/*/tsconfig.json"],
+				project: ["./tsconfig.json", "./packages/*/tsconfig.json", "./packages/games/*/tsconfig.json"],
 				tsconfigRootDir: import.meta.dirname,
 				allowAutomaticSingleRunInference: true,
 				EXPERIMENTAL_useProjectService: true

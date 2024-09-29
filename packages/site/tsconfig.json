@@ -3,15 +3,13 @@
 	"compilerOptions": {
 		"baseUrl": "../..",
 		"paths": {
-			"prozilla-os": ["packages/prozilla-os/src/main"],
-			"@prozilla-os/*": ["packages/*/src/main", "packages/apps/*/src/main"],
+			"@prozilla-os/*": ["packages/*/src/main", "packages/games/*/src/main"],
 		},
 	},
 	"include": [
 		"src",
 		"vite.config.ts",
 		"scripts",
-		"../core/src/**/*",
 	],
 	"exclude": ["node_modules"]
 }

@@ -11,4 +11,3 @@ yarn-error.log*
 *.ini
 
 /tmp
-packages/demo/public/config/tree.json

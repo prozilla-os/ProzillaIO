@@ -1,8 +1,13 @@
-import { App, AppsConfig, Vector2 } from "@prozilla-os/core";
-import { Browser, BrowserProps } from "./components/Browser";
+import { App, Vector2, WebView, WindowProps } from "@prozilla-os/core";
+import iconSvg from "../public/icon.svg";
 
-const browser = new App<BrowserProps>("Browser", "browser", Browser, { size: new Vector2(700, 500) })
-	.setIconUrl("https://os.prozilla.dev/assets/apps/icons/browser.svg")
-	.setRole(AppsConfig.APP_ROLES.Browser);
+interface MinesweeperProps extends WindowProps {};
 
-export { browser };
+const minesweeper = new App<MinesweeperProps>("Minesweeper", "minesweeper", WebView, {
+	source: "https://prozilla.dev/minesweeper",
+	size: new Vector2(500, 580)
+});
+
+minesweeper.setIconUrl(iconSvg);
+
+export { minesweeper };

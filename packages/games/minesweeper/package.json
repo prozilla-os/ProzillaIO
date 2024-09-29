@@ -1,8 +1,8 @@
 {
-	"name": "@prozilla-os/browser",
-	"description": "A ProzillaOS application for browsing the internet.",
-	"version": "1.1.4",
-	"homepage": "https://os.prozilla.dev/browser",
+	"name": "@prozilla-os/minesweeper",
+	"description": "A ProzillaOS game.",
+	"version": "1.0.0",
+	"homepage": "https://games.prozilla.dev",
 	"author": {
 		"name": "Prozilla",
 		"email": "business@prozilla.dev",
@@ -16,23 +16,24 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/prozilla-os/ProzillaOS.git",
-		"directory": "packages/apps/browser"
+		"url": "git+https://github.com/prozilla-os/ProzillaOS-games.git",
+		"directory": "packages/games/minesweeper"
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@prozilla-os/core": "workspace:*",
+		"@prozilla-os/core": "1.2.4",
+		"@prozilla-os/minesweeper": "file:",
 		"react": "^18.3.1"
 	},
 	"devDependencies": {
+		"@prozilla-os/shared": "1.1.1",
 		"@types/node": "^20.14.5",
 		"@types/react": "^18.3.3",
 		"@vitejs/plugin-react-swc": "^3.7.0",
 		"typescript": "^5.4.5",
 		"vite": "^5.3.1",
 		"vite-plugin-dts": "^3.9.1",
-		"vite-plugin-lib-inject-css": "^2.1.1",
-		"@prozilla-os/shared": "workspace:*"
+		"vite-plugin-lib-inject-css": "^2.1.1"
 	},
 	"files": [
 		"dist"

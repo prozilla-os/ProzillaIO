@@ -1,6 +1,6 @@
 import ghpages from "gh-pages";
-import { ANSI } from "../packages/core/src/constants";
-import { BASE_URL, BUILD_DIR, COMMIT_MESSAGE, DOMAIN, REPO_URL } from "../packages/demo/src/config/deploy.config";
+import { ANSI } from "../packages/site/src/constants/_utils/utils.const";
+import { BASE_URL, BUILD_DIR, COMMIT_MESSAGE, DOMAIN, REPO_URL } from "../packages/site/src/config/deploy.config";
 import path from "node:path";
 import { name } from "../package.json";
 

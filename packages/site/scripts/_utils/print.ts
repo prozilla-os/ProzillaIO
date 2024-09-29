@@ -1,4 +1,4 @@
-import { ANSI } from "@prozilla-os/core";
+import { ANSI } from "../../src/constants/_utils/utils.const";
 
 export type status = "error" | "info" | "file" | "success" | "start";
 

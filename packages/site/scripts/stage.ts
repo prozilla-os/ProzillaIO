@@ -1,9 +1,8 @@
 import fs from "node:fs";
 import { appsConfig } from "../src/config/apps.config";
-import { ANSI } from "../../core/src/constants";
+import { ANSI } from "../src/constants/_utils/utils.const";
 import { NAME, TAG_LINE } from "../src/config/branding.config";
 import { BASE_URL, BUILD_DIR, DOMAIN } from "../src/config/deploy.config";
-import { defaultSkin } from "../src/config/skin.config";
 import { name } from "../package.json";
 
 const PATHS = {
@@ -16,12 +15,6 @@ const PATHS = {
 function generateSitemapXml() {
 	const date = new Date();
 	const lastModified = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-
-	const images = defaultSkin.wallpapers.map((path) => `
-		<image:image>
-			<image:loc>${BASE_URL.slice(0, -1) + path}</image:loc>
-		</image:image>`
-	);
 
 	const pages = appsConfig.apps.map(({ id }) => `
 	<url>
@@ -38,7 +31,6 @@ function generateSitemapXml() {
 	<url>
 		<loc>${BASE_URL}</loc>
 		<lastmod>${lastModified}</lastmod>
-		${images.join("")}
 	</url>
 	${pages.join("")}
 </urlset>`;

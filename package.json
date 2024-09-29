@@ -6,40 +6,37 @@
 		"email": "business@prozilla.dev",
 		"url": "https://prozilla.dev/"
 	},
-	"homepage": "https://os.prozilla.dev/",
+	"homepage": "https://games.prozilla.dev/",
 	"type": "module",
 	"license": "MIT",
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
-		"start": "pnpm run demo:start",
+		"start": "pnpm run site:start",
 		"build": "pnpm -r --sequential build",
 		"stage": "pnpm vite-node scripts/stageSite.ts",
 		"predeploy": "rimraf dist && pnpm run stage",
 		"deploy": "pnpm vite-node scripts/publishSite.ts",
-		"demo:start": "pnpm --filter @prozilla-os/demo run start",
-		"demo:build": "pnpm --filter @prozilla-os/demo run build",
-		"demo:preview": "pnpm --filter @prozilla-os/demo run preview",
-		"demo:stage": "pnpm --filter @prozilla-os/demo run stage",
-		"demo:fetch": "pnpm --filter @prozilla-os/demo run fetch",
-		"docs:start": "pnpm --filter @prozilla-os/docs run start",
-		"docs:build": "pnpm --filter @prozilla-os/docs run build",
-		"docs:preview": "pnpm --filter @prozilla-os/docs run preview",
-		"docs:generate": "pnpm --filter @prozilla-os/docs run generate",
-		"packages:build": "pnpm -r --sequential --filter prozilla-os... build",
-		"packages:update": "npx changeset && pnpm changeset version",
-		"packages:release": "pnpm changeset publish && pnpm vite-node scripts/createRelease.ts"
+		"site:start": "pnpm --filter @prozilla-os/games-site run start",
+		"site:build": "pnpm --filter @prozilla-os/games-site run build",
+		"site:preview": "pnpm --filter @prozilla-os/games-site run preview",
+		"site:stage": "pnpm --filter @prozilla-os/games-site run stage",
+		"games:build": "pnpm -r --sequential --filter \"./packages/games/**\" build",
+		"games:update": "npx changeset && pnpm changeset version",
+		"games:release": "pnpm changeset publish"
 	},
 	"workspaces": [
 		"packages/*",
-		"packages/apps/*"
+		"packages/games/*"
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/prozilla-os/ProzillaOS.git"
+		"url": "git+https://github.com/prozilla-os/ProzillaOS-games.git"
 	},
 	"dependencies": {
 		"commander": "^12.1.0",
-		"pnpm": "^9.5.0"
+		"pnpm": "^9.5.0",
+		"prozilla-os": "1.2.5",
+		"react-dom": "^18.3.1"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.27.5",

@@ -6,7 +6,7 @@
 		"email": "business@prozilla.dev",
 		"url": "https://prozilla.dev/"
 	},
-	"homepage": "https://os.prozilla.dev/",
+	"homepage": "https://games.prozilla.dev/",
 	"type": "module",
 	"scripts": {
 		"start": "vite",
@@ -17,17 +17,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/prozilla-os/ProzillaOS.git",
-		"directory": "packages/demo"
+		"url": "git+https://github.com/prozilla-os/ProzillaOS-games.git",
+		"directory": "packages/site"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.5.2",
 		"@fortawesome/free-solid-svg-icons": "^6.5.2",
 		"@fortawesome/react-fontawesome": "^0.2.2",
-		"@prozilla-os/bliss-radio": "^1.0.6",
-		"@prozilla-os/logic-sim": "workspace:*",
-		"@prozilla-os/skins": "workspace:*",
-		"prozilla-os": "workspace:*",
+		"@prozilla-os/core": "1.2.4",
+		"@prozilla-os/minesweeper": "workspace:*",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-router-dom": "^6.23.1",
