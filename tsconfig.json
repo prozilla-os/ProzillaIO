@@ -1,0 +1,47 @@
+{
+	"compilerOptions": {
+		/* Language and Environment */
+		"target": "ESNext",
+		"jsx": "react-jsx",
+		
+		/* Modules */
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"types": ["vite/client", "vite-plugin-svgr/client", "node"],
+		"allowUmdGlobalAccess": true,
+		"resolveJsonModule": true,
+		
+		/* JavaScript Support */
+		"allowJs": true,
+		"checkJs": true,
+		
+		/* Emit */
+		"noEmit": true,
+		"noEmitOnError": true,
+		
+		/* Interop Constraints */
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		
+		/* Type Checking */
+		"strict": true,
+
+		/* Module resolution */
+		"baseUrl": "./",
+		"paths": {
+			"prozilla-os": ["packages/prozilla-os/dist/main", "packages/prozilla-os/src/main"],
+			"@prozilla-os/*": ["packages/*/dist/main", "packages/*/src/main", "packages/apps/*/dist/main", "packages/apps/*/src/main"],
+		}
+	},
+	"include": [
+		"packages/**/*",
+		"scripts/**/*"
+	],
+	"exclude": [
+		"**/node_modules/**/*",
+		"**/dist/**/*",
+		"./.vscode",
+		"./.github",
+	],
+}
