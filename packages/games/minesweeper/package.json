@@ -1,7 +1,7 @@
 {
 	"name": "@prozilla-os/minesweeper",
 	"description": "A ProzillaOS game.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"homepage": "https://games.prozilla.dev",
 	"author": {
 		"name": "Prozilla",
