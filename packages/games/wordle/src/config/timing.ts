@@ -1,0 +1,4 @@
+export const POPUP_DURATION = 3500;
+export const CELL_FLIP_ANIMATION_DURATION = 600;
+export const ROW_SHAKE_ANIMATION_DURATION = 600;
+export const KEYBOARD_HIDE_DELAY = 300;

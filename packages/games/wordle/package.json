@@ -21,6 +21,9 @@
 	},
 	"license": "MIT",
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.5.2",
+		"@fortawesome/free-solid-svg-icons": "^6.5.2",
+		"@fortawesome/react-fontawesome": "^0.2.2",
 		"@prozilla-os/core": "1.2.4",
 		"@prozilla-os/wordle": "file:",
 		"react": "^18.3.1"
