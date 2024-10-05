@@ -1,0 +1,80 @@
+.Cell {
+	width: 100%;
+	height: auto;
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
+	color: var(--text-color);
+	border: var(--radius) solid var(--border-color);
+	border-radius: var(--radius);
+	background-color: transparent;
+	transition: background-color 900ms ease-in-out;
+
+	font-size: 1em;
+	font-weight: bold;
+    text-transform: uppercase;
+
+	aspect-ratio: 1 / 1;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+.Cell:not(:empty) {
+	animation: pop 200ms normal;
+}
+
+@keyframes pop {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.Cell.Active {
+	border-style: dashed;
+}
+
+.Cell.Green, .Cell.Yellow, .Cell.Gray {
+	border-color: transparent;
+	animation: flip 300ms alternate 0ms 2 forwards ease-in-out;
+}
+
+.Cell.Green {
+	background-color: var(--green);
+}
+
+.Cell.Yellow {
+	background-color: var(--yellow);
+}
+
+.Cell.Gray {
+	background-color: var(--border-color);
+}
+
+@keyframes flip {
+	0% {
+		transform: rotateX(0deg);
+	}
+	100% {
+		transform: rotateX(90deg);
+	}
+}
+
+@media screen and (min-width: 440px) {
+	.Cell {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 280px) {
+	.Cell {
+		font-size: 0.75em;
+	}
+}

@@ -1,28 +1,26 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Keyboard.module.css";
-import { faDeleteLeft } from "@fortawesome/free-solid-svg-icons";
-import { useGameContext } from "../../../hooks/gameContext";
 import { useEffect } from "react";
+import { useClassNames } from "@prozilla-os/core";
+import { CellType } from "../../../types/grid";
+import { Key } from "./key/Key";
 
-const KEYBOARD_ROWS = [
+const KEYBOARD_KEYS = [
 	["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
 	["a", "s", "d", "f", "g", "h", "j", "k", "l"],
 	["enter", "z", "x", "c", "v", "b", "n", "m", "backspace"]
 ];
 
 interface KeyboardProps {
-	isFocused: boolean;
+	onKeyPress: (key: string) => void;
+	keyHighlights: Record<string, CellType["status"]>;
+	gameOver: boolean;
 }
 
-export function Keyboard({ isFocused }: KeyboardProps) {
-	const game = useGameContext();
-
+export function Keyboard({ onKeyPress, keyHighlights, gameOver }: KeyboardProps) {
 	useEffect(() => {
-		if (!isFocused)
-			return;
-
 		const onKeyDown = (event: KeyboardEvent) => {
-			game.enterKey(event.key);
+			event.preventDefault();
+			onKeyPress(event.key);
 		};
 
 		window.addEventListener("keydown", onKeyDown);
@@ -30,20 +28,19 @@ export function Keyboard({ isFocused }: KeyboardProps) {
 		return () => {
 			window.removeEventListener("keydown", onKeyDown);
 		};
-	}, [isFocused]);
+	}, [onKeyPress]);
 
-	return <div className={styles.Keyboard}>
-		{KEYBOARD_ROWS.map((keys, index) =>
+	const classNames = [styles.Keyboard];
+
+	if (gameOver)
+		classNames.push(styles.Hidden);
+
+	return <div className={useClassNames(classNames)}>
+		{KEYBOARD_KEYS.map((keys, index) =>
 			<div key={index} className={styles.Row}>
-				{keys.map((key) => {
-					if (key == "backspace") {
-						return <button key={key} className={styles.Key} onClick={() => { game.enterKey(key); }}>
-							<FontAwesomeIcon icon={faDeleteLeft}/>
-						</button>;
-					} else {
-						return <button key={key} className={styles.Key} onClick={() => { game.enterKey(key); }}>{key}</button>;
-					}
-				})}
+				{keys.map((key) => 
+					<Key key={key} value={key} keyHighlights={keyHighlights} onKeyPress={onKeyPress}/>
+				)}
 			</div>
 		)}
 	</div>;

@@ -1,3 +1,11 @@
 .Grid {
-	
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	justify-content: center;
+    align-items: center;
+	width: calc(100% - 40px);
+	height: calc(100% - var(--keyboard-height));
+    padding: 10px;
 }

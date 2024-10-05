@@ -1,7 +1,17 @@
 .Popup {
-
+	opacity: 0;
+	left: 50%;
+	margin: auto;
+	margin-top: calc(var(--header-height) + 18px);
+	padding: 6px 12px;
+	width: auto;
+	height: auto;
+	background-color: var(--background-color-b);
+	border-radius: var(--radius);
+	transition: opacity var(--transition);
+	transform: translateX(-50%);
 }
 
-.Popup-text {
-	
+.Popup.Active {
+	opacity: 1;
 }

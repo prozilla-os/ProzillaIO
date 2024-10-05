@@ -1,24 +1,20 @@
-import { ROW_COUNT } from "../../constants/data";
+import { CellType, GridType } from "../../types/grid";
 import { Grid } from "./grid/Grid";
-import { Row } from "./grid/row/Row";
 import { Keyboard } from "./keyboard/Keyboard";
+import styles from "./PlayArea.module.css";
 
 interface PlayAreaProps {
-	isFocused: boolean;
+	grid: GridType;
+	activeRowIndex: number;
+	activeCellIndex: number;
+	onKeyPress: (key: string) => void;
+	keyHighlights: Record<string, CellType["status"]>;
+	gameOver: boolean;
 }
 
-export function PlayArea({ isFocused }: PlayAreaProps) {
-	const rows = [];
-	for (let i = 0; i < ROW_COUNT; i++) {
-		rows.push(i);
-	}
-
-	return <main>
-		<Grid>
-			{rows.map((index) =>
-				<Row key={index} index={index}/>
-			)}
-		</Grid>
-		<Keyboard isFocused={isFocused}/>
+export function PlayArea({ grid, activeRowIndex, activeCellIndex, onKeyPress, keyHighlights, gameOver }: PlayAreaProps) {
+	return <main className={styles.PlayArea}>
+		<Grid grid={grid} activeRowIndex={activeRowIndex} activeCellIndex={activeCellIndex}/>
+		<Keyboard onKeyPress={onKeyPress} gameOver={gameOver} keyHighlights={keyHighlights}/>
 	</main>;
 }

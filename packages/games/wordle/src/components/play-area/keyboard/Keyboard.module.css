@@ -1,3 +1,20 @@
 .Keyboard {
-	
+	height: calc(var(--keyboard-height) + 6px);
+	width: 100%;
+	max-width: var(--max-width);
+	padding: 6px;
+	box-sizing: border-box;
+	transform: translateY(0);
+	transition: transform 300ms ease-in;
+}
+
+.Keyboard.Hidden {
+	transform: translateY(100%);
+}
+
+.Row {
+	display: flex;
+	gap: var(--keyboard-spacing);
+	width: 100%;
+	margin-bottom: var(--keyboard-spacing);
 }

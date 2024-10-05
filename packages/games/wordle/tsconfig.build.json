@@ -1,6 +1,5 @@
 {
 	"extends": "./tsconfig.json",
-	"compilerOptions": {
-		
-	}
+	"compilerOptions": {},
+	"include": ["src", "public/data/*.json"]
 }

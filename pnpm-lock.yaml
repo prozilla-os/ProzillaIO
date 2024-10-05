@@ -165,9 +165,12 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1
     devDependencies:
+      '@prozilla-os/dev-tools':
+        specifier: ^1.0.1
+        version: 1.0.1
       '@prozilla-os/shared':
-        specifier: 1.1.1
-        version: 1.1.1
+        specifier: 1.2.0
+        version: 1.2.0
       '@types/node':
         specifier: ^20.14.5
         version: 20.14.10
@@ -803,6 +806,9 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
+  '@prozilla-os/dev-tools@1.0.1':
+    resolution: {integrity: sha512-gBgv5nyJ7qLmmpzF/fXhtgN0pSPz1QQ/BoOh+0OVn+phK5ZFIYGD89QGJLbQ8Bip6MULaBl+UD7KQDGZyuhX3w==}
+
   '@prozilla-os/file-explorer@1.1.4':
     resolution: {integrity: sha512-Js8XMEbCuyVUSmKRj3i4Cl9V+YKd7G/sG6nzlffpm++IVaikpzQF6LFE3lzNhu4UcA+aw+hPW1rYJO7A0r4M7w==}
 
@@ -814,6 +820,9 @@ packages:
 
   '@prozilla-os/shared@1.1.1':
     resolution: {integrity: sha512-SNBMY1DPKYkUMgMgF32i+bCe6orbzJlwZI/0h7t5EWPPzggQJxNXzBFoXgHp1DOy0vXKqOgUnuJtOZtewUR3+Q==}
+
+  '@prozilla-os/shared@1.2.0':
+    resolution: {integrity: sha512-/DL6GFgge9dDKVG7bMhzvq6cbooaEJP2W3SuxALvfo8dI+7S4fyWLSQ2XcDXQv5d91eNEGR1ozYpTDAJRTIIOw==}
 
   '@prozilla-os/skins@1.1.2':
     resolution: {integrity: sha512-QdoS37ECd7lzAkc6gDA74H8rscEZuwSFTE5vn6rNQoMFiQ33B0LYe8+jlzQdS4cTKFvMV4IfrvRdhBAPnldN3Q==}
@@ -3095,6 +3104,9 @@ packages:
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
+  tslib@2.7.0:
+    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
+
   tty-table@4.2.3:
     resolution: {integrity: sha512-Fs15mu0vGzCrj8fmJNP7Ynxt5J7praPXqFN0leZeZBXJwkMxv9cb2D454k1ltrtUSJbZ4yH4e0CynsHLxmUfFA==}
     engines: {node: '>=8.0.0'}
@@ -4026,6 +4038,8 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
+  '@prozilla-os/dev-tools@1.0.1': {}
+
   '@prozilla-os/file-explorer@1.1.4(react-dom@18.3.1(react@18.3.1))':
     dependencies:
       '@fortawesome/fontawesome-svg-core': 6.6.0
@@ -4055,6 +4069,8 @@ snapshots:
       - react-dom
 
   '@prozilla-os/shared@1.1.1': {}
+
+  '@prozilla-os/shared@1.2.0': {}
 
   '@prozilla-os/skins@1.1.2(react@18.3.1)':
     dependencies:
@@ -5687,7 +5703,7 @@ snapshots:
     dependencies:
       copy-anything: 2.0.6
       parse-node-version: 1.0.1
-      tslib: 2.6.3
+      tslib: 2.7.0
     optionalDependencies:
       errno: 0.1.8
       graceful-fs: 4.2.11
@@ -6564,6 +6580,9 @@ snapshots:
       typescript: 5.4.5
 
   tslib@2.6.3: {}
+
+  tslib@2.7.0:
+    optional: true
 
   tty-table@4.2.3:
     dependencies:

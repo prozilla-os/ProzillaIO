@@ -1,8 +1,17 @@
-import { PropsWithChildren } from "react";
+import { GridType } from "../../../types/grid";
 import styles from "./Grid.module.css";
+import { Row } from "./row/Row";
 
-export function Grid({ children }: PropsWithChildren) {
+interface GridProps {
+	grid: GridType;
+	activeRowIndex: number;
+	activeCellIndex: number;
+}
+
+export function Grid({ grid, activeRowIndex, activeCellIndex }: GridProps) {
 	return <div className={styles.Grid}>
-		{children}
+		{grid.map((row, rowIndex) =>
+			<Row key={rowIndex} row={row} active={rowIndex == activeRowIndex} activeCellIndex={activeCellIndex}/>
+		)}
 	</div>;
 }

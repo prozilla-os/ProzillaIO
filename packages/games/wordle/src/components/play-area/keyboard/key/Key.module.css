@@ -1,0 +1,39 @@
+.Key {
+	flex: 1;
+    justify-content: center;
+    align-items: center;
+	height: 60px;
+	padding: 0 3px;
+	font-size: 1em;
+	font-weight: bold;
+	color: var(--text-color);
+	background-color: var(--border-color);
+	border: none;
+	border-radius: var(--radius);
+	transition: background-color var(--transition);
+	box-sizing: border-box;
+    text-transform: uppercase;
+	cursor: pointer;	
+}
+
+@media screen and (max-width: 260px) {
+	.Key {
+		padding: 0;
+	}
+}
+
+.Key.Green {
+	background-color: var(--green);
+}
+
+.Key.Yellow {
+	background-color: var(--yellow);
+}
+
+.Key.Gray {
+	background-color: var(--background-color-b);
+}
+
+.Key.Backspace {
+	padding: 0 6px;
+}

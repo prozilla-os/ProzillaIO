@@ -1,5 +1,16 @@
 # @prozilla-os/wordle
 
+## 1.1.0
+
+### Minor Changes
+
+- Added native implementation
+
+### Patch Changes
+
+- Updated dependencies
+  - @prozilla-os/wordle@1.1.0
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,3 +1,35 @@
 .Row {
-	
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	width: calc(100% - 40px);
+    justify-content: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.Row.Shake {
+	animation: shake 600ms normal 0ms 1 forwards ease-in-out;
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+	20% {
+		transform: translateX(-12px);
+	}
+	40% {
+		transform: translateX(12px);
+	}
+	60% {
+		transform: translateX(-12px);
+	}
+	80% {
+		transform: translateX(12px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }

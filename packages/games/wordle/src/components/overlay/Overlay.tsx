@@ -5,13 +5,15 @@ import { Popup } from "./popup/Popup";
 
 interface OverlayProps {
 	toggleHelp: Function;
+	helpVisible: boolean;
+	popup: string | null;
 }
 
-export function Overlay({ toggleHelp }: OverlayProps) {
+export function Overlay({ toggleHelp, helpVisible, popup }: OverlayProps) {
 	return <aside>
 		<div className={styles.Overlay}>
-			<Popup/>
-			<Help toggleHelp={toggleHelp}/>
+			<Popup text={popup}/>
+			<Help toggleHelp={toggleHelp} helpVisible={helpVisible}/>
 		</div>
 		<Canvas/>
 	</aside>;

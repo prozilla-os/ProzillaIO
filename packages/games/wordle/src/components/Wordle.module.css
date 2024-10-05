@@ -1,3 +1,60 @@
 .Wordle {
-	
+	--background-color-a: #0F0F10;
+	--background-color-b: #18181b;
+	--border-color: #2C2C2E;
+	--text-color: #CED1D4;
+
+	--red: #c76a43;
+	--yellow: #A5902D;
+	--green: #447D3D;
+	--blue: #49a0a3;
+	--purple: #675378;
+
+	--radius: 3px;
+	--header-height: 50px;
+	--keyboard-height: 200px;
+	--keyboard-spacing: 3px;
+	--max-width: 500px;
+
+	--transition: 200ms ease-in-out;
+	--font-family: "DM Sans", sans-serif;
+
+	position: relative;
+	color: var(--text-color);
+	background-color: var(--background-color-a);
+	font-family: var(--font-family);
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+@media screen and (min-width: 425px) {
+	.Wordle {
+		--keyboard-spacing: 6px;
+	}
+}
+
+.Wordle * {
+	color: var(--text-color);
+}
+
+.Wordle h1,
+.Wordle h2 {
+	color: var(--text-color);
+	font-size: 1.25em;
+	font-family: var(--font-family);
+	font-weight: bold;
+}
+
+.Wordle p,
+.Wordle a {
+	color: var(--text-color);
+	font-size: 1em;
+	font-family: var(--font-family);
+	font-weight: normal;
+}
+
+a {
+	cursor: pointer;
 }
