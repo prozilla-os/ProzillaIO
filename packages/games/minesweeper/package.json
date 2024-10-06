@@ -1,7 +1,7 @@
 {
 	"name": "@prozilla-os/minesweeper",
 	"description": "A ProzillaOS game.",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"homepage": "https://games.prozilla.dev",
 	"author": {
 		"name": "Prozilla",
@@ -22,11 +22,10 @@
 	"license": "MIT",
 	"dependencies": {
 		"@prozilla-os/core": "1.2.4",
-		"@prozilla-os/minesweeper": "file:",
 		"react": "^18.3.1"
 	},
 	"devDependencies": {
-		"@prozilla-os/shared": "1.1.1",
+		"@prozilla-os/dev-tools": "^1.0.1",
 		"@types/node": "^20.14.5",
 		"@types/react": "^18.3.3",
 		"@vitejs/plugin-react-swc": "^3.7.0",
@@ -34,6 +33,9 @@
 		"vite": "^5.3.6",
 		"vite-plugin-dts": "^3.9.1",
 		"vite-plugin-lib-inject-css": "^2.1.1"
+	},
+	"peerDependencies": {
+		"react": "^18.3.1"
 	},
 	"files": [
 		"dist"
