@@ -2,11 +2,12 @@
 	"extends": "../../../tsconfig.json",
 	"compilerOptions": {
 		"baseUrl": "../../..",
+		"composite": true,
 		"outDir": "dist",
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"noEmit": false,
 	},
-	"include": ["src", "vite.config.ts", "public/data/*.json"],
+	"include": ["src", "vite.config.ts", "./public/data/*.json"],
 	"exclude": ["node_modules"],
 }

@@ -1,7 +1,8 @@
 import { ROW_COUNT, WORD_LENGTH } from "../constants/data";
 import { CellType, GridType } from "../types/grid";
-import themes from "../../public/data/words.json";
-import dictionary from "../../public/data/dictionary.json";
+import themes from "./data/words";
+import dictionary from "./data/dictionary";
+import { removeDuplicatesFromArray } from "@prozilla-os/core";
 
 export class Game {
 	word: string;
@@ -25,12 +26,12 @@ export class Game {
 			this.words = this.words.concat(themedWords);
 		});
 
-		this.validGuesses = [...this.words];
-		Object.keys(dictionary).forEach((key) => {
-			if (key.length == 5) {
-				this.validGuesses.push(key);
-			}
-		});
+		this.words = removeDuplicatesFromArray(this.words);
+
+		this.validGuesses = [
+			...this.words,
+			...dictionary
+		];
 
 		this.chooseRandomWord();
 	}
