@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://games.prozilla.dev/sitemap.xml
+Sitemap: https://io.prozilla.dev/sitemap.xml

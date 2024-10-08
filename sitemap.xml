@@ -3,20 +3,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
-		<loc>https://games.prozilla.dev/</loc>
-		<lastmod>2024-10-7</lastmod>
+		<loc>https://io.prozilla.dev/</loc>
+		<lastmod>2024-10-08</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://games.prozilla.dev/minesweeper</loc>
-		<lastmod>2024-10-7</lastmod>
+		<loc>https://io.prozilla.dev/minesweeper</loc>
+		<lastmod>2024-10-08</lastmod>
 	</url>
 	<url>
-		<loc>https://games.prozilla.dev/wordle</loc>
-		<lastmod>2024-10-7</lastmod>
+		<loc>https://io.prozilla.dev/wordle</loc>
+		<lastmod>2024-10-08</lastmod>
 	</url>
 	<url>
-		<loc>https://games.prozilla.dev/ball-maze</loc>
-		<lastmod>2024-10-7</lastmod>
+		<loc>https://io.prozilla.dev/ball-maze</loc>
+		<lastmod>2024-10-08</lastmod>
 	</url>
 </urlset>
