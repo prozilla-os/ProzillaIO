@@ -4,6 +4,7 @@ import { appsConfig } from "./config/apps.config";
 import { ProzillaOS } from "@prozilla-os/core";
 import { skin } from "./config/skin.config";
 import { Router } from "./router/Router";
+import "./styles/global.css";
 
 export function Main(): ReactElement {
 	return <ProzillaOS

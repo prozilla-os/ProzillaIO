@@ -1,8 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import checker from "vite-plugin-checker";
-import { BUILD_DIR } from "./src/config/deploy.config";
+import { BASE_URL, BUILD_DIR, DOMAIN } from "./src/config/deploy.config";
 import { resolve } from "path";
+import { stageSitePlugin } from "@prozilla-os/dev-tools";
+import { appsConfig } from "./src/config/apps.config";
+import { NAME, TAG_LINE } from "./src/config/branding.config";
+import { skin } from "./src/config/skin.config";
 
 /**
  * Loads packages from their local path instead of node_modules 
@@ -55,10 +59,20 @@ export default defineConfig(({ command }) => {
 			react(),
 			checker({
 				typescript: true,
-			}),
+			})
 		],
 		build: {
-			outDir: BUILD_DIR
+			outDir: BUILD_DIR,
+			rollupOptions: {
+				plugins: [
+					stageSitePlugin({
+						appsConfig,
+						domain: DOMAIN,
+						siteName: NAME,
+						siteTagLine: TAG_LINE
+					})
+				]
+			}
 		},
 		resolve: {
 			alias: devMode ? aliases : {},

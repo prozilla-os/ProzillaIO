@@ -1,12 +1,12 @@
 {
-	"name": "@prozilla-os/games",
+	"name": "@prozilla-os/prozilla-io",
 	"private": true,
 	"author": {
 		"name": "Prozilla",
 		"email": "business@prozilla.dev",
 		"url": "https://prozilla.dev/"
 	},
-	"homepage": "https://games.prozilla.dev/",
+	"homepage": "https://io.prozilla.dev/",
 	"type": "module",
 	"license": "MIT",
 	"scripts": {
@@ -30,7 +30,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/prozilla-os/ProzillaOS-games.git"
+		"url": "git+https://github.com/prozilla-os/ProzillaIO.git"
 	},
 	"dependencies": {
 		"commander": "^12.1.0",

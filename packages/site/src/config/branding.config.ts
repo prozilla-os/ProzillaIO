@@ -1,2 +1,2 @@
-export const NAME = "ProzillaOS Games";
-export const TAG_LINE = "Online games collection";
+export const NAME = "ProzillaIO";
+export const TAG_LINE = "Online minigames powered by ProzillaOS";

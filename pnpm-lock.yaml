@@ -77,8 +77,8 @@ importers:
         version: 18.3.1
     devDependencies:
       '@prozilla-os/dev-tools':
-        specifier: ^1.0.2
-        version: 1.0.2(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
+        specifier: ^1.0.5
+        version: 1.0.5(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
       '@types/node':
         specifier: ^20.14.5
         version: 20.16.10
@@ -111,8 +111,8 @@ importers:
         version: 18.3.1
     devDependencies:
       '@prozilla-os/dev-tools':
-        specifier: ^1.0.2
-        version: 1.0.2(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
+        specifier: ^1.0.5
+        version: 1.0.5(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
       '@types/node':
         specifier: ^20.14.5
         version: 20.16.10
@@ -157,8 +157,8 @@ importers:
         version: 18.3.1
     devDependencies:
       '@prozilla-os/dev-tools':
-        specifier: ^1.0.2
-        version: 1.0.2(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
+        specifier: ^1.0.5
+        version: 1.0.5(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
       '@types/node':
         specifier: ^20.14.5
         version: 20.16.10
@@ -232,6 +232,9 @@ importers:
       '@eslint/js':
         specifier: ^9.5.0
         version: 9.12.0
+      '@prozilla-os/dev-tools':
+        specifier: ^1.0.6
+        version: 1.0.6(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
       '@types/eslint':
         specifier: ^8.56.10
         version: 8.56.12
@@ -810,13 +813,16 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  '@prozilla-os/core@1.3.1':
-    resolution: {integrity: sha512-6m0dxpY1lo2+w/wwaVHqZ1BeurbZ7U4gJhZ99VW9H81I8P5rTeMUm0HvWjQGO3Tfw7xwQL5yQFsam8J9dIZYFA==}
+  '@prozilla-os/core@1.3.2':
+    resolution: {integrity: sha512-iVttf5uhD04kErj+l3Q4hm1TXR2oEqXdu5F0rJ52+mxAPqHDTTpZ9Yos0S5KNQ9dEoa9vlD5UHHzaA1vJRjvZQ==}
     peerDependencies:
       react: ^18.3.1
 
-  '@prozilla-os/dev-tools@1.0.2':
-    resolution: {integrity: sha512-O1mjNKj6IacAlSpOA6fAEc0okIzqFhqUmralYLoEA2Isjr2POUROtV/pLVZ6/MGvxp8JYUn8gpNFWoUHOGpJwQ==}
+  '@prozilla-os/dev-tools@1.0.5':
+    resolution: {integrity: sha512-Fae348hqN4U0RTFZoXJAIgj8kJSSNNfxrZAZo0u8G/+QO8WUvQA5h9+41HSnvc/ztc4pbYPBhiJ41NgY3paG5A==}
+
+  '@prozilla-os/dev-tools@1.0.6':
+    resolution: {integrity: sha512-CA+GiMhzPzOyResq21Qn4Xp2n/DbgvvcayB/+2fgFruSrS5mVoMuUqGqfUyefz1AoSpwMypLK9ukrM+d4+HPBg==}
 
   '@prozilla-os/file-explorer@1.1.4':
     resolution: {integrity: sha512-Js8XMEbCuyVUSmKRj3i4Cl9V+YKd7G/sG6nzlffpm++IVaikpzQF6LFE3lzNhu4UcA+aw+hPW1rYJO7A0r4M7w==}
@@ -1270,14 +1276,8 @@ packages:
   '@volar/typescript@2.4.6':
     resolution: {integrity: sha512-NMIrA7y5OOqddL9VtngPWYmdQU03htNKFtAYidbYfWA0TOhyGVd9tfcP4TsLWQ+RBWDZCbBqsr8xzU0ZOxYTCQ==}
 
-  '@vue/compiler-core@3.4.31':
-    resolution: {integrity: sha512-skOiodXWTV3DxfDhB4rOf3OGalpITLlgCeOwb+Y9GJpfQ8ErigdBUHomBzvG78JoVE8MJoQsb+qhZiHfKeNeEg==}
-
   '@vue/compiler-core@3.5.11':
     resolution: {integrity: sha512-PwAdxs7/9Hc3ieBO12tXzmTD+Ln4qhT/56S+8DvrrZ4kLDn4Z/AMUr8tXJD0axiJBS0RKIoNaR0yMuQB9v9Udg==}
-
-  '@vue/compiler-dom@3.4.31':
-    resolution: {integrity: sha512-wK424WMXsG1IGMyDGyLqB+TbmEBFM78hIsOJ9QwUVLGrcSk0ak6zYty7Pj8ftm7nEtdU/DGQxAXp0/lM/2cEpQ==}
 
   '@vue/compiler-dom@3.5.11':
     resolution: {integrity: sha512-pyGf8zdbDDRkBrEzf8p7BQlMKNNF5Fk/Cf/fQ6PiUz9at4OaUfyXW0dGJTo2Vl1f5U9jSLCNf0EZJEogLXoeew==}
@@ -1300,9 +1300,6 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
-
-  '@vue/shared@3.4.31':
-    resolution: {integrity: sha512-Yp3wtJk//8cO4NItOPpi3QkLExAr/aLBGZMmTtW9WpdwBCJpRM6zj9WgWktXAl8IDIozwNMByT45JP3tO3ACWA==}
 
   '@vue/shared@3.5.11':
     resolution: {integrity: sha512-W8GgysJVnFo81FthhzurdRAWP/byq3q2qIw70e0JWblzVhjgOMiC2GyovXrZTFQJnFVryYaKGP3Tc9vYzYm6PQ==}
@@ -2374,9 +2371,6 @@ packages:
   lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
-
-  magic-string@0.30.10:
-    resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
 
   magic-string@0.30.11:
     resolution: {integrity: sha512-+Wri9p0QHMy+545hKww7YAu5NyzF8iomPL/RQazugQ9+Ez4Ic3mERMd8ZTX5rfK944j+560ZJi8iAwgak1Ac7A==}
@@ -3942,7 +3936,7 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  '@prozilla-os/core@1.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@prozilla-os/core@1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@fortawesome/fontawesome-svg-core': 6.6.0
       '@fortawesome/free-regular-svg-icons': 6.6.0
@@ -3958,9 +3952,33 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  '@prozilla-os/dev-tools@1.0.2(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)':
+  '@prozilla-os/dev-tools@1.0.5(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)':
     dependencies:
-      '@prozilla-os/core': 1.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@prozilla-os/core': 1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@prozilla-os/shared': 1.2.0
+      '@vitejs/plugin-react-swc': 3.7.0(vite@5.4.8(@types/node@20.16.10)(less@4.2.0))
+      vite: 5.4.8(@types/node@20.16.10)(less@4.2.0)
+      vite-plugin-css-injected-by-js: 3.5.2(vite@5.4.8(@types/node@20.16.10)(less@4.2.0))
+      vite-plugin-dts: 3.9.1(@types/node@20.16.10)(rollup@4.24.0)(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.10)(less@4.2.0))
+    transitivePeerDependencies:
+      - '@swc/helpers'
+      - '@types/node'
+      - less
+      - lightningcss
+      - react
+      - react-dom
+      - rollup
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - typescript
+
+  '@prozilla-os/dev-tools@1.0.6(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)':
+    dependencies:
+      '@prozilla-os/core': 1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@prozilla-os/shared': 1.2.0
       '@vitejs/plugin-react-swc': 3.7.0(vite@5.4.8(@types/node@20.16.10)(less@4.2.0))
       vite: 5.4.8(@types/node@20.16.10)(less@4.2.0)
@@ -4482,14 +4500,6 @@ snapshots:
       path-browserify: 1.0.1
       vscode-uri: 3.0.8
 
-  '@vue/compiler-core@3.4.31':
-    dependencies:
-      '@babel/parser': 7.25.7
-      '@vue/shared': 3.4.31
-      entities: 4.5.0
-      estree-walker: 2.0.2
-      source-map-js: 1.2.1
-
   '@vue/compiler-core@3.5.11':
     dependencies:
       '@babel/parser': 7.25.7
@@ -4497,11 +4507,6 @@ snapshots:
       entities: 4.5.0
       estree-walker: 2.0.2
       source-map-js: 1.2.1
-
-  '@vue/compiler-dom@3.4.31':
-    dependencies:
-      '@vue/compiler-core': 3.4.31
-      '@vue/shared': 3.4.31
 
   '@vue/compiler-dom@3.5.11':
     dependencies:
@@ -4517,8 +4522,8 @@ snapshots:
     dependencies:
       '@volar/language-core': 1.11.1
       '@volar/source-map': 1.11.1
-      '@vue/compiler-dom': 3.4.31
-      '@vue/shared': 3.4.31
+      '@vue/compiler-dom': 3.5.11
+      '@vue/shared': 3.5.11
       computeds: 0.0.1
       minimatch: 9.0.5
       muggle-string: 0.3.1
@@ -4539,8 +4544,6 @@ snapshots:
       path-browserify: 1.0.1
     optionalDependencies:
       typescript: 5.6.2
-
-  '@vue/shared@3.4.31': {}
 
   '@vue/shared@3.5.11': {}
 
@@ -5733,10 +5736,6 @@ snapshots:
     dependencies:
       yallist: 4.0.0
 
-  magic-string@0.30.10:
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.0
-
   magic-string@0.30.11:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -6586,11 +6585,11 @@ snapshots:
   vite-plugin-dts@3.9.1(@types/node@20.16.10)(rollup@4.24.0)(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.10)(less@4.2.0)):
     dependencies:
       '@microsoft/api-extractor': 7.43.0(@types/node@20.16.10)
-      '@rollup/pluginutils': 5.1.0(rollup@4.24.0)
+      '@rollup/pluginutils': 5.1.2(rollup@4.24.0)
       '@vue/language-core': 1.8.27(typescript@5.6.2)
       debug: 4.3.7
       kolorist: 1.8.0
-      magic-string: 0.30.10
+      magic-string: 0.30.11
       typescript: 5.6.2
       vue-tsc: 1.8.27(typescript@5.6.2)
     optionalDependencies:

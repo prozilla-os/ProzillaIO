@@ -6,18 +6,16 @@
 		"email": "business@prozilla.dev",
 		"url": "https://prozilla.dev/"
 	},
-	"homepage": "https://games.prozilla.dev/",
+	"homepage": "https://io.prozilla.dev/",
 	"type": "module",
 	"scripts": {
 		"start": "vite",
 		"build": "tsc --project tsconfig.build.json && vite build",
-		"postbuild": "pnpm run stage",
-		"preview": "vite preview --port 8080",
-		"stage": "vite-node scripts/stage"
+		"preview": "vite preview --port 8080"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/prozilla-os/ProzillaOS-games.git",
+		"url": "git+https://github.com/prozilla-os/ProzillaIO.git",
 		"directory": "packages/site"
 	},
 	"dependencies": {
@@ -39,6 +37,7 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.5.0",
+		"@prozilla-os/dev-tools": "^1.0.6",
 		"@types/eslint": "^8.56.10",
 		"@types/gh-pages": "^6.1.0",
 		"@types/node": "^20.14.6",
