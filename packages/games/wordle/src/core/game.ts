@@ -2,7 +2,7 @@ import { ROW_COUNT, WORD_LENGTH } from "../constants/data";
 import { CellType, GridType } from "../types/grid";
 import themes from "./data/words";
 import dictionary from "./data/dictionary";
-import { removeDuplicatesFromArray } from "@prozilla-os/core";
+import { removeDuplicatesFromArray } from "@prozilla-os/shared";
 
 export class Game {
 	word: string;

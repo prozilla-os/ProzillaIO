@@ -1,3 +1,4 @@
-.ProzillaOS-DirectoryList_File, .ProzillaOS-DirectoryList_Folder {
+.ProzillaOS-DirectoryList .ProzillaOS-DirectoryList_File,
+.ProzillaOS-DirectoryList .ProzillaOS-DirectoryList_Folder {
 	display: none;
 }

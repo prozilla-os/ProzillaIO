@@ -1,7 +1,7 @@
 {
 	"name": "@prozilla-os/ball-maze",
 	"description": "A 3D wooden ball maze game for ProzillaOS.",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"homepage": "https://io.prozilla.dev/ball-maze",
 	"author": {
 		"name": "Prozilla",
@@ -21,7 +21,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@prozilla-os/core": "1.2.4",
+		"@prozilla-os/core": "1.3.2",
 		"react": "^18.3.1"
 	},
 	"devDependencies": {
