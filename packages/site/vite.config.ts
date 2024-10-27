@@ -69,7 +69,8 @@ export default defineConfig(({ command }) => {
 						appsConfig,
 						domain: DOMAIN,
 						siteName: NAME,
-						siteTagLine: TAG_LINE
+						siteTagLine: TAG_LINE,
+						favicon: "/icon.svg"
 					})
 				]
 			}
