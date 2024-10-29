@@ -35,7 +35,7 @@
 	"dependencies": {
 		"commander": "^12.1.0",
 		"pnpm": "^9.12.0",
-		"prozilla-os": "1.3.6",
+		"prozilla-os": "1.3.8",
 		"react-dom": "^18.3.1"
 	},
 	"devDependencies": {
