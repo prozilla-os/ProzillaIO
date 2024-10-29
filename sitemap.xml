@@ -4,20 +4,28 @@
 	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
 		<loc>https://io.prozilla.dev/</loc>
-		<lastmod>2024-10-27</lastmod>
+		<lastmod>2024-10-29</lastmod>
 		
 	</url>
 	
 	<url>
 		<loc>https://io.prozilla.dev/minesweeper</loc>
-		<lastmod>2024-10-27</lastmod>
+		<lastmod>2024-10-29</lastmod>
 	</url>
 	<url>
 		<loc>https://io.prozilla.dev/wordle</loc>
-		<lastmod>2024-10-27</lastmod>
+		<lastmod>2024-10-29</lastmod>
 	</url>
 	<url>
 		<loc>https://io.prozilla.dev/ball-maze</loc>
-		<lastmod>2024-10-27</lastmod>
+		<lastmod>2024-10-29</lastmod>
+	</url>
+	<url>
+		<loc>https://io.prozilla.dev/settings</loc>
+		<lastmod>2024-10-29</lastmod>
+	</url>
+	<url>
+		<loc>https://io.prozilla.dev/file-explorer</loc>
+		<lastmod>2024-10-29</lastmod>
 	</url>
 </urlset>
