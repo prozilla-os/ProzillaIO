@@ -35,7 +35,7 @@ export function Wordle({ active }: WindowProps) {
 			setActiveCellIndex(newCellIndex);
 	}, [activeCellIndex]);
 
-	const handleKeyPress = useCallback((key: string) => {
+	const handleKeyPress = useCallback((key: string, event?: KeyboardEvent) => {
 		if (!active || gameOver)
 			return;
 
@@ -43,7 +43,9 @@ export function Wordle({ active }: WindowProps) {
 
 		const updatedGrid = [...grid];
 		const currentRow = updatedGrid[activeRowIndex];
+		const specialKeyPressed = event === undefined ? false : event.ctrlKey || event.altKey || event.metaKey;
 
+		let keyHandled = true;
 		if (key === "enter") {
 			if (!game.isValidGuess(currentRow)) {
 				setPopup(`${Game.rowToWord(currentRow).toUpperCase()} is not a valid word.`);
@@ -77,11 +79,17 @@ export function Wordle({ active }: WindowProps) {
 				currentRow[activeCellIndex - 1].content = "";
 				moveActiveCell(false);
 			}
-		} else if (key.match(/^[a-z]$/g)) {
+		} else if (!specialKeyPressed && key.match(/^[a-z]$/g)) {
 			currentRow[activeCellIndex].content = key;
 			updatedGrid[activeRowIndex] = currentRow;
 
 			moveActiveCell(true);
+		} else {
+			keyHandled = false;
+		}
+
+		if (keyHandled) {
+			event?.preventDefault();
 		}
 
 		setGrid(updatedGrid);

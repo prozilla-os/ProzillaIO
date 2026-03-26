@@ -10,8 +10,8 @@ const KEYBOARD_KEYS = [
 	["enter", "z", "x", "c", "v", "b", "n", "m", "backspace"]
 ];
 
-interface KeyboardProps {
-	onKeyPress: (key: string) => void;
+export interface KeyboardProps {
+	onKeyPress: (key: string, event?: KeyboardEvent) => void;
 	keyHighlights: Record<string, CellType["status"]>;
 	gameOver: boolean;
 }
@@ -19,11 +19,7 @@ interface KeyboardProps {
 export function Keyboard({ onKeyPress, keyHighlights, gameOver }: KeyboardProps) {
 	useEffect(() => {
 		const onKeyDown = (event: KeyboardEvent) => {
-			if (event.ctrlKey || event.altKey) {
-				return;
-			}
-			event.preventDefault();
-			onKeyPress(event.key);
+			onKeyPress(event.key, event);
 		};
 
 		window.addEventListener("keydown", onKeyDown);

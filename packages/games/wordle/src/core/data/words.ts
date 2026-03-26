@@ -8,7 +8,12 @@ export default {
 		"lucky",
 		"fresh",
 		"loose",
-		"tight"
+		"tight",
+		"quick",
+		"brave",
+		"calm",
+		"eager",
+		"proud",
 	],
 	"food":[
 		"salad",
@@ -20,7 +25,11 @@ export default {
 		"lunch",
 		"sugar",
 		"peach",
-		"apple"
+		"apple",
+		"grape",
+		"olive",
+		"berry",
+		"mango",
 	],
 	"vehicles":[
 		"plane",
@@ -29,14 +38,18 @@ export default {
 		"motor",
 		"drive",
 		"wheel",
-		"train"
+		"train",
+		"truck",
 	],
 	"drinks":[
 		"vodka",
 		"water",
 		"drink",
 		"juice",
-		"glass"
+		"glass",
+		"cider",
+		"latte",
+		"mocha",
 	],
 	"animals":[
 		"rhino",
@@ -47,25 +60,41 @@ export default {
 		"snail",
 		"goose",
 		"moose",
-		"tiger"
+		"tiger",
+		"zebra",
+		"panda",
+		"eagle",
+		"otter",
+		"fauna",
 	],
 	"buildings":[
 		"store",
 		"hotel",
 		"house",
-		"stall"
+		"stall",
+		"tower",
+		"cabin",
+		"arena",
+		"lobby",
 	],
 	"colors":[
 		"black",
 		"brown",
 		"green",
 		"white",
-		"color"
+		"color",
+		"beige",
+		"amber",
+		"ivory",
 	],
 	"countries":[
 		"china",
 		"japan",
-		"spain"
+		"spain",
+		"india",
+		"chile",
+		"italy",
+		"egypt",
 	],
 	"nature":[
 		"beach",
@@ -76,57 +105,96 @@ export default {
 		"stick",
 		"stone",
 		"grass",
-		"plant"
+		"plant",
+		"cliff",
+		"flora",
+		"storm",
+		"cloud",
 	],
 	"clothing":[
 		"shirt",
-		"dress"
+		"dress",
+		"pants",
+		"skirt",
+		"jeans",
+		"scarf",
 	],
 	"school":[
 		"class",
 		"board",
 		"chair",
 		"chalk",
-		"pupil"
+		"pupil",
+		"notes",
+		"paper",
 	],
 	"body":[
 		"torso",
 		"brain",
 		"blood",
-		"heart"
+		"heart",
+		"teeth",
+		"nerve",
 	],
 	"underwater":[
 		"diver",
-		"shark"
+		"shark",
+		"coral",
+		"whale",
 	],
 	"furniture":[
 		"couch",
-		"bench"
+		"bench",
+		"shelf",
+		"table",
+		"chair",
+		"stool"
 	],
 	"kitchen":[
 		"chair",
 		"stool",
 		"table",
 		"plate",
-		"knife"
+		"knife",
+		"spoon",
+		"glass",
 	],
 	"shapes":[
 		"cross",
 		"point",
 		"round",
 		"sharp",
-		"shape"
+		"shape",
+		"curve",
+		"angle",
+		"square",
+		"triad",
 	],
 	"sound":[
 		"sound",
 		"music",
-		"audio"
+		"audio",
+		"noise",
+		"voice",
 	],
 	"verbs": [
 		"yield",
+		"build",
+		"carry",
+		"throw",
+		"catch",
+		"drive",
 	],
 	"objects": [
 		"shell",
 		"world",
+		"clock",
+		"phone",
+		"brush",
+		"light",
+		"cable",
+	],
+	"misc": [
+		"trial"
 	],
 }

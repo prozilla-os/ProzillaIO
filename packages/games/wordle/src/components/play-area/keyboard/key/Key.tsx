@@ -3,11 +3,12 @@ import { CellType } from "../../../../types/grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDeleteLeft } from "@fortawesome/free-solid-svg-icons";
 import { useClassNames } from "@prozilla-os/core";
+import { KeyboardProps } from "../Keyboard";
 
 interface KeyProps {
-	onKeyPress: (key: string) => void;
+	onKeyPress: KeyboardProps["onKeyPress"];
 	value: string;
-	keyHighlights: Record<string, CellType["status"]>;
+	keyHighlights: KeyboardProps["keyHighlights"];
 }
 
 export function Key({ value, onKeyPress, keyHighlights }: KeyProps) {

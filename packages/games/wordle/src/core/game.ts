@@ -40,7 +40,6 @@ export class Game {
 	chooseRandomWord() {
 		const randIndex = Math.floor(Math.random() * this.words.length);
 		this.word = this.words[randIndex];
-		console.log(this.word);
 	}
 
 	// Process the guess and update the game state
