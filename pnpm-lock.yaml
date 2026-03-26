@@ -70,15 +70,15 @@ importers:
   packages/games/ball-maze:
     dependencies:
       '@prozilla-os/core':
-        specifier: 1.3.2
-        version: 1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.3.14
+        version: 1.3.14(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
     devDependencies:
       '@prozilla-os/dev-tools':
-        specifier: ^1.0.5
-        version: 1.0.5(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
+        specifier: ^1.1.11
+        version: 1.1.11(@types/node@20.16.10)(less@4.2.0)(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
       '@types/node':
         specifier: ^20.14.5
         version: 20.16.10
@@ -104,15 +104,15 @@ importers:
   packages/games/minesweeper:
     dependencies:
       '@prozilla-os/core':
-        specifier: 1.3.2
-        version: 1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.3.14
+        version: 1.3.14(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
     devDependencies:
       '@prozilla-os/dev-tools':
-        specifier: ^1.0.5
-        version: 1.0.5(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
+        specifier: ^1.1.11
+        version: 1.1.11(@types/node@20.16.10)(less@4.2.0)(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
       '@types/node':
         specifier: ^20.14.5
         version: 20.16.10
@@ -147,18 +147,18 @@ importers:
         specifier: ^0.2.2
         version: 0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
       '@prozilla-os/core':
-        specifier: 1.3.2
-        version: 1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.3.14
+        version: 1.3.14(react@18.3.1)
       '@prozilla-os/shared':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: ^1.2.1
+        version: 1.2.1
       react:
         specifier: ^18.3.1
         version: 18.3.1
     devDependencies:
       '@prozilla-os/dev-tools':
-        specifier: ^1.0.5
-        version: 1.0.5(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
+        specifier: ^1.1.11
+        version: 1.1.11(@types/node@20.16.10)(less@4.2.0)(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
       '@types/node':
         specifier: ^20.14.5
         version: 20.16.10
@@ -195,18 +195,18 @@ importers:
       '@prozilla-os/ball-maze':
         specifier: workspace:*
         version: link:../games/ball-maze
-      '@prozilla-os/core':
-        specifier: 1.3.2
-        version: 1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@prozilla-os/minesweeper':
         specifier: workspace:*
         version: link:../games/minesweeper
       '@prozilla-os/skins':
-        specifier: ^1.1.2
-        version: 1.1.2(react@18.3.1)
+        specifier: ^1.1.9
+        version: 1.1.9(react@18.3.1)
       '@prozilla-os/wordle':
         specifier: workspace:*
         version: link:../games/wordle
+      prozilla-os:
+        specifier: ^1.3.16
+        version: 1.3.16(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -233,8 +233,8 @@ importers:
         specifier: ^9.5.0
         version: 9.12.0
       '@prozilla-os/dev-tools':
-        specifier: ^1.0.6
-        version: 1.0.6(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
+        specifier: ^1.1.11
+        version: 1.1.11(@types/node@20.16.10)(less@4.2.0)(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)
       '@types/eslint':
         specifier: ^8.56.10
         version: 8.56.12
@@ -686,20 +686,12 @@ packages:
     resolution: {integrity: sha512-vH9PiIMMwvhCx31Af3HiGzsVNULDbyVkHXwlemn/B0TFj/00ho3y55efXrUZTfQipxoHC5u4xq6zblww1zm1Ig==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fortawesome/fontawesome-common-types@6.5.2':
-    resolution: {integrity: sha512-gBxPg3aVO6J0kpfHNILc+NMhXnqHumFxOmjYCFfOiLZfwhnnfhtsdA2hfJlDnj+8PjAs6kKQPenOTKj3Rf7zHw==}
-    engines: {node: '>=6'}
-
   '@fortawesome/fontawesome-common-types@6.6.0':
     resolution: {integrity: sha512-xyX0X9mc0kyz9plIyryrRbl7ngsA9jz77mCZJsUkLl+ZKs0KWObgaEBoSgQiYWAsSmjz/yjl0F++Got0Mdp4Rw==}
     engines: {node: '>=6'}
 
   '@fortawesome/fontawesome-svg-core@6.6.0':
     resolution: {integrity: sha512-KHwPkCk6oRT4HADE7smhfsKudt9N/9lm6EJ5BVg0tD1yPA5hht837fB87F8pn15D8JfTqQOjhKTktwmLMiD7Kg==}
-    engines: {node: '>=6'}
-
-  '@fortawesome/free-regular-svg-icons@6.5.2':
-    resolution: {integrity: sha512-iabw/f5f8Uy2nTRtJ13XZTS1O5+t+anvlamJ3zJGLEVE2pKsAWhPv2lq01uQlfgCX7VaveT3EVs515cCN9jRbw==}
     engines: {node: '>=6'}
 
   '@fortawesome/free-regular-svg-icons@6.6.0':
@@ -712,6 +704,7 @@ packages:
 
   '@fortawesome/react-fontawesome@0.2.2':
     resolution: {integrity: sha512-EnkrprPNqI6SXJl//m29hpaNzOp1bruISWaOiRtkMi/xSvHJlzc2j2JAYS7egxt/EbjSNV/k6Xy0AQI6vB2+1g==}
+    deprecated: v0.2.x is no longer supported. Unless you are still using FontAwesome 5, please update to v3.1.1 or greater.
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ~1 || ~6
       react: '>=16.3'
@@ -802,8 +795,17 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
+  '@prozilla-os/app-center@1.0.12':
+    resolution: {integrity: sha512-fBtO0RoAhomPFThXo+rNu3WdeYAcjpJXtHykMzghwhs6fOZ/d/jtJFedi8JXFXldabH2k//wOcE27pWbWzozQw==}
+
+  '@prozilla-os/browser@1.1.19':
+    resolution: {integrity: sha512-NJasjiwr48+zBu9X2sZBrdt9MS1ovhaQY6vHpvqrMAKydiXdJn3KG+0lwAgwphzjce/0Nl1lH3IMay+tmwyPoA==}
+
   '@prozilla-os/browser@1.1.4':
     resolution: {integrity: sha512-Prprv3/GPTK/h7oilx+kqehMebX6lMcMucqT8KUmt+yrsCV4MprktuYC4OBAFdDo5h1rmJaswjjrqm1keasACw==}
+
+  '@prozilla-os/calculator@1.1.19':
+    resolution: {integrity: sha512-Z9BDrHHzHlY4SOiU0A/Nw6OM95AhNpik6Cm7DBX8bfHtBWzfEx/TPxPWeZH1iLfdBzgkz1TMEAXKgBW/PyPGGw==}
 
   '@prozilla-os/calculator@1.1.4':
     resolution: {integrity: sha512-voZ6aYN0FiplMhOZ8RIPFwYH8PIfVBaAV+9kTvkPTdCXR/o/R+aEPw3AJoTNlgJrGKt315Cii753sts3gXoJkg==}
@@ -813,36 +815,53 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  '@prozilla-os/core@1.3.2':
-    resolution: {integrity: sha512-iVttf5uhD04kErj+l3Q4hm1TXR2oEqXdu5F0rJ52+mxAPqHDTTpZ9Yos0S5KNQ9dEoa9vlD5UHHzaA1vJRjvZQ==}
+  '@prozilla-os/core@1.3.14':
+    resolution: {integrity: sha512-v+t8tmgCJWvByKhy9MHEXekHnhjATCAek3i53S6rLUqyX2aPVpjqvGpuHGcA7hpFGOK8WJ1uad/Z/T8bCNhEng==}
     peerDependencies:
       react: ^18.3.1
 
-  '@prozilla-os/dev-tools@1.0.5':
-    resolution: {integrity: sha512-Fae348hqN4U0RTFZoXJAIgj8kJSSNNfxrZAZo0u8G/+QO8WUvQA5h9+41HSnvc/ztc4pbYPBhiJ41NgY3paG5A==}
+  '@prozilla-os/dev-tools@1.1.11':
+    resolution: {integrity: sha512-Ai8JCIeITYpCVB16Dhd3wnYkn6HNdTXYkqyUEWPvwHmSkl09T0r41P0tMk8s02Eg+FXIr/1NSHttfUhxitRg9w==}
 
-  '@prozilla-os/dev-tools@1.0.6':
-    resolution: {integrity: sha512-CA+GiMhzPzOyResq21Qn4Xp2n/DbgvvcayB/+2fgFruSrS5mVoMuUqGqfUyefz1AoSpwMypLK9ukrM+d4+HPBg==}
+  '@prozilla-os/file-explorer@1.1.19':
+    resolution: {integrity: sha512-ehafKLwSI9Aqwo+Q/Z0isWj8AugkPQ1YVH7Yq5EiK3dk/dgyxKWB9xzYI+JCdzowuC0yz9a+xQTdh4YFfE3dCw==}
 
   '@prozilla-os/file-explorer@1.1.4':
     resolution: {integrity: sha512-Js8XMEbCuyVUSmKRj3i4Cl9V+YKd7G/sG6nzlffpm++IVaikpzQF6LFE3lzNhu4UcA+aw+hPW1rYJO7A0r4M7w==}
 
+  '@prozilla-os/media-viewer@1.1.19':
+    resolution: {integrity: sha512-VDtu8zOBnsRa0oDlzDMaCEi6Q1aWyccHIHnrwNTVH+THK16aOo2j94tegTVAX2DIBqMKZIMhzLvx3/pnZyYqqg==}
+
   '@prozilla-os/media-viewer@1.1.4':
     resolution: {integrity: sha512-hGTGKAV7MrUoLamta7jnpSeTbIPgVKYgbvswNqSDbQ39M6+hJn1RPoiUDipzXqVfrp/Up+Bv3xHKGTHImtYIkQ==}
+
+  '@prozilla-os/settings@1.1.20':
+    resolution: {integrity: sha512-bhC49Ao2pWrxl8cTWOgad13I2ZsSjPhaDawPY9dzt446Yg/4xZF9+ipr/JWQaM2OaUEYh31WZrhlDLlXniN38g==}
 
   '@prozilla-os/settings@1.1.4':
     resolution: {integrity: sha512-71qItQYhHhOnjiTIFzR7btXwM9ZCPQPl9ne7koSXPGkW09fkFbeqEe9AVqqSAcR8WWQ3t455bjELIWwAsrulog==}
 
-  '@prozilla-os/shared@1.2.0':
-    resolution: {integrity: sha512-/DL6GFgge9dDKVG7bMhzvq6cbooaEJP2W3SuxALvfo8dI+7S4fyWLSQ2XcDXQv5d91eNEGR1ozYpTDAJRTIIOw==}
+  '@prozilla-os/shared@1.2.1':
+    resolution: {integrity: sha512-r4SemEkyuDvbMo/ruaVM8auzCCLEYx5VaXW0FjRi++yHeAzgATSUNFN9OF6gGBVUH0lZAUsqImBpDlHNeSYl2A==}
 
   '@prozilla-os/skins@1.1.2':
     resolution: {integrity: sha512-QdoS37ECd7lzAkc6gDA74H8rscEZuwSFTE5vn6rNQoMFiQ33B0LYe8+jlzQdS4cTKFvMV4IfrvRdhBAPnldN3Q==}
     peerDependencies:
       react: ^18.3.1
 
+  '@prozilla-os/skins@1.1.9':
+    resolution: {integrity: sha512-hnurVWGFeO2r8Zz7A9M7a7bhg35E7g55VVM+O2rwjizg3ko0gKtYk63PZMjkP6SB9OV+7D7IrjftiEBnPcvKnA==}
+    peerDependencies:
+      react: ^18.3.1
+
+  '@prozilla-os/terminal@1.1.21':
+    resolution: {integrity: sha512-H4auxQ1DASmrSQaMhz7TEB9M0t/tXtTkB7R5clLE8Fybk0qz/blb0WakAthX5L/LwghwFK06/TU2Q1/hfLOE8A==}
+
   '@prozilla-os/terminal@1.1.5':
     resolution: {integrity: sha512-9DnvTza9VSiyQCHGDuW2LuQ2hGydBhkeYQgDya0hc2toBJAmg5ebMrkCpB/bB+TJu1t1D0k6wu1jCOHIiuYw8A==}
+
+  '@prozilla-os/text-editor@1.1.19':
+    resolution: {integrity: sha512-dj+cHShNfwiHNk7rGsoInN995Dr2yKRQhsti9N8BVtITfjfYHG6lvrnHT1/EqC7HqYEadO6namrfj7ZMyCopTA==}
 
   '@prozilla-os/text-editor@1.1.4':
     resolution: {integrity: sha512-qwYJ9DJmzodRlsEDSj8EWoD+B7G/6/1RhZ293jwp6/2ZUAlSBWcF7LntohpET0KFZ7wzdGVouSIRzUm9dJOnzQ==}
@@ -2450,8 +2469,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  needle@3.3.1:
-    resolution: {integrity: sha512-6k0YULvhpw+RoLNiQCRKOl09Rv1dPLr8hHnVjHqdolKwDrdNyk+Hmrthi4lIGPPz3r39dLx0hsF5s40sZ3Us4Q==}
+  needle@3.5.0:
+    resolution: {integrity: sha512-jaQyPKKk2YokHrEg+vFDYxXIHTCBgiZwSHOoVx/8V3GIBS8/VN6NdVRmg8q1ERtPkMvmOvebsgga4sAj5hls/w==}
     engines: {node: '>= 4.4.x'}
     hasBin: true
 
@@ -2676,6 +2695,11 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
+  prozilla-os@1.3.16:
+    resolution: {integrity: sha512-N0fBM81ZxNt0zOk8H9I6DA/1bgJiqJaTT3oTY9Dyh2YQPrSki/rsm9C2+U11CE8sP0aFAJXXuL6uO1seNkx4WA==}
+    peerDependencies:
+      react: ^18.3.1
+
   prr@1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
 
@@ -2820,8 +2844,9 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sax@1.4.1:
-    resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
+  sax@1.6.0:
+    resolution: {integrity: sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==}
+    engines: {node: '>=11.0.0'}
 
   scheduler@0.23.2:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
@@ -3026,6 +3051,9 @@ packages:
 
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
+
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -3743,17 +3771,11 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@fortawesome/fontawesome-common-types@6.5.2': {}
-
   '@fortawesome/fontawesome-common-types@6.6.0': {}
 
   '@fortawesome/fontawesome-svg-core@6.6.0':
     dependencies:
       '@fortawesome/fontawesome-common-types': 6.6.0
-
-  '@fortawesome/free-regular-svg-icons@6.5.2':
-    dependencies:
-      '@fortawesome/fontawesome-common-types': 6.5.2
 
   '@fortawesome/free-regular-svg-icons@6.6.0':
     dependencies:
@@ -3907,12 +3929,27 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
+  '@prozilla-os/app-center@1.0.12':
+    dependencies:
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      react: 18.3.1
+
+  '@prozilla-os/browser@1.1.19':
+    dependencies:
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      react: 18.3.1
+
   '@prozilla-os/browser@1.1.4(react-dom@18.3.1(react@18.3.1))':
     dependencies:
       '@prozilla-os/core': 1.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - react-dom
+
+  '@prozilla-os/calculator@1.1.19':
+    dependencies:
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      react: 18.3.1
 
   '@prozilla-os/calculator@1.1.4(react-dom@18.3.1(react@18.3.1))':
     dependencies:
@@ -3924,7 +3961,7 @@ snapshots:
   '@prozilla-os/core@1.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@fortawesome/fontawesome-svg-core': 6.6.0
-      '@fortawesome/free-regular-svg-icons': 6.5.2
+      '@fortawesome/free-regular-svg-icons': 6.6.0
       '@fortawesome/free-solid-svg-icons': 6.6.0
       '@fortawesome/react-fontawesome': 0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
       '@prozilla-os/skins': 1.1.2(react@18.3.1)
@@ -3936,26 +3973,25 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  '@prozilla-os/core@1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@prozilla-os/core@1.3.14(react@18.3.1)':
     dependencies:
       '@fortawesome/fontawesome-svg-core': 6.6.0
       '@fortawesome/free-regular-svg-icons': 6.6.0
       '@fortawesome/free-solid-svg-icons': 6.6.0
       '@fortawesome/react-fontawesome': 0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
-      '@prozilla-os/shared': 1.2.0
-      '@prozilla-os/skins': 1.1.2(react@18.3.1)
+      '@prozilla-os/shared': 1.2.1
+      '@prozilla-os/skins': 1.1.9(react@18.3.1)
       react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
       react-draggable: 4.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-error-boundary: 4.0.13(react@18.3.1)
       react-ga4: 2.1.0
       react-svg: 16.1.34(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-    transitivePeerDependencies:
-      - react-dom
 
-  '@prozilla-os/dev-tools@1.0.5(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)':
+  '@prozilla-os/dev-tools@1.1.11(@types/node@20.16.10)(less@4.2.0)(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)':
     dependencies:
-      '@prozilla-os/core': 1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@prozilla-os/shared': 1.2.0
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      '@prozilla-os/shared': 1.2.1
       '@vitejs/plugin-react-swc': 3.7.0(vite@5.4.8(@types/node@20.16.10)(less@4.2.0))
       vite: 5.4.8(@types/node@20.16.10)(less@4.2.0)
       vite-plugin-css-injected-by-js: 3.5.2(vite@5.4.8(@types/node@20.16.10)(less@4.2.0))
@@ -3966,7 +4002,6 @@ snapshots:
       - less
       - lightningcss
       - react
-      - react-dom
       - rollup
       - sass
       - sass-embedded
@@ -3976,29 +4011,13 @@ snapshots:
       - terser
       - typescript
 
-  '@prozilla-os/dev-tools@1.0.6(@types/node@20.16.10)(less@4.2.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.0)(typescript@5.6.2)':
+  '@prozilla-os/file-explorer@1.1.19':
     dependencies:
-      '@prozilla-os/core': 1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@prozilla-os/shared': 1.2.0
-      '@vitejs/plugin-react-swc': 3.7.0(vite@5.4.8(@types/node@20.16.10)(less@4.2.0))
-      vite: 5.4.8(@types/node@20.16.10)(less@4.2.0)
-      vite-plugin-css-injected-by-js: 3.5.2(vite@5.4.8(@types/node@20.16.10)(less@4.2.0))
-      vite-plugin-dts: 3.9.1(@types/node@20.16.10)(rollup@4.24.0)(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.10)(less@4.2.0))
-    transitivePeerDependencies:
-      - '@swc/helpers'
-      - '@types/node'
-      - less
-      - lightningcss
-      - react
-      - react-dom
-      - rollup
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-      - typescript
+      '@fortawesome/fontawesome-svg-core': 6.6.0
+      '@fortawesome/free-solid-svg-icons': 6.6.0
+      '@fortawesome/react-fontawesome': 0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      react: 18.3.1
 
   '@prozilla-os/file-explorer@1.1.4(react-dom@18.3.1(react@18.3.1))':
     dependencies:
@@ -4010,12 +4029,28 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
+  '@prozilla-os/media-viewer@1.1.19':
+    dependencies:
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      react: 18.3.1
+
   '@prozilla-os/media-viewer@1.1.4(react-dom@18.3.1(react@18.3.1))':
     dependencies:
       '@prozilla-os/core': 1.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
     transitivePeerDependencies:
       - react-dom
+
+  '@prozilla-os/settings@1.1.20':
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.6.0
+      '@fortawesome/free-solid-svg-icons': 6.6.0
+      '@fortawesome/react-fontawesome': 0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      '@prozilla-os/file-explorer': 1.1.19
+      '@prozilla-os/shared': 1.2.1
+      '@prozilla-os/skins': 1.1.9(react@18.3.1)
+      react: 18.3.1
 
   '@prozilla-os/settings@1.1.4(react-dom@18.3.1(react@18.3.1))':
     dependencies:
@@ -4028,10 +4063,23 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  '@prozilla-os/shared@1.2.0': {}
+  '@prozilla-os/shared@1.2.1': {}
 
   '@prozilla-os/skins@1.1.2(react@18.3.1)':
     dependencies:
+      react: 18.3.1
+
+  '@prozilla-os/skins@1.1.9(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+
+  '@prozilla-os/terminal@1.1.21':
+    dependencies:
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      '@prozilla-os/shared': 1.2.1
+      '@prozilla-os/skins': 1.1.9(react@18.3.1)
+      anser: 2.3.0
+      escape-carriage: 1.3.1
       react: 18.3.1
 
   '@prozilla-os/terminal@1.1.5(react-dom@18.3.1(react@18.3.1))':
@@ -4042,6 +4090,17 @@ snapshots:
       react: 18.3.1
     transitivePeerDependencies:
       - react-dom
+
+  '@prozilla-os/text-editor@1.1.19(@fortawesome/fontawesome-svg-core@6.6.0)':
+    dependencies:
+      '@fortawesome/free-solid-svg-icons': 6.6.0
+      '@fortawesome/react-fontawesome': 0.2.2(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1)
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      markdown-to-jsx: 7.5.0(react@18.3.1)
+      react: 18.3.1
+      react-syntax-highlighter: 15.5.0(react@18.3.1)
+    transitivePeerDependencies:
+      - '@fortawesome/fontawesome-svg-core'
 
   '@prozilla-os/text-editor@1.1.4(@fortawesome/fontawesome-svg-core@6.6.0)(react-dom@18.3.1(react@18.3.1))':
     dependencies:
@@ -5665,14 +5724,14 @@ snapshots:
     dependencies:
       copy-anything: 2.0.6
       parse-node-version: 1.0.1
-      tslib: 2.7.0
+      tslib: 2.8.1
     optionalDependencies:
       errno: 0.1.8
       graceful-fs: 4.2.11
       image-size: 0.5.5
       make-dir: 2.1.0
       mime: 1.6.0
-      needle: 3.3.1
+      needle: 3.5.0
       source-map: 0.6.1
     optional: true
 
@@ -5803,10 +5862,10 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  needle@3.3.1:
+  needle@3.5.0:
     dependencies:
       iconv-lite: 0.6.3
-      sax: 1.4.1
+      sax: 1.6.0
     optional: true
 
   no-case@3.0.4:
@@ -6022,6 +6081,21 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
+  prozilla-os@1.3.16(@fortawesome/fontawesome-svg-core@6.6.0)(react@18.3.1):
+    dependencies:
+      '@prozilla-os/app-center': 1.0.12
+      '@prozilla-os/browser': 1.1.19
+      '@prozilla-os/calculator': 1.1.19
+      '@prozilla-os/core': 1.3.14(react@18.3.1)
+      '@prozilla-os/file-explorer': 1.1.19
+      '@prozilla-os/media-viewer': 1.1.19
+      '@prozilla-os/settings': 1.1.20
+      '@prozilla-os/terminal': 1.1.21
+      '@prozilla-os/text-editor': 1.1.19(@fortawesome/fontawesome-svg-core@6.6.0)
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@fortawesome/fontawesome-svg-core'
+
   prr@1.0.1:
     optional: true
 
@@ -6201,7 +6275,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sax@1.4.1:
+  sax@1.6.0:
     optional: true
 
   scheduler@0.23.2:
@@ -6454,6 +6528,9 @@ snapshots:
       typescript: 5.6.2
 
   tslib@2.7.0: {}
+
+  tslib@2.8.1:
+    optional: true
 
   type-check@0.4.0:
     dependencies:

@@ -5,7 +5,10 @@ export default {
 		"alone",
 		"small",
 		"large",
-		"lucky"
+		"lucky",
+		"fresh",
+		"loose",
+		"tight"
 	],
 	"food":[
 		"salad",
@@ -25,7 +28,8 @@ export default {
 		"pilot",
 		"motor",
 		"drive",
-		"wheel"
+		"wheel",
+		"train"
 	],
 	"drinks":[
 		"vodka",
@@ -117,5 +121,12 @@ export default {
 		"sound",
 		"music",
 		"audio"
-	]
+	],
+	"verbs": [
+		"yield",
+	],
+	"objects": [
+		"shell",
+		"world",
+	],
 }

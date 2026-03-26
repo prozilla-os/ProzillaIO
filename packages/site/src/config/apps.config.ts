@@ -5,8 +5,8 @@ import { ballMaze } from "@prozilla-os/ball-maze";
 
 export const appsConfig = new AppsConfig({
 	apps: [
-		minesweeper,
-		wordle,
-		ballMaze
+		minesweeper.setShowDesktopIcon(true),
+		wordle.setShowDesktopIcon(true),
+		ballMaze.setShowDesktopIcon(true),
 	],
 });
