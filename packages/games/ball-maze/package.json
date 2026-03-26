@@ -1,7 +1,7 @@
 {
 	"name": "@prozilla-os/ball-maze",
 	"description": "A 3D wooden ball maze game for ProzillaOS.",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"homepage": "https://io.prozilla.dev/ball-maze",
 	"author": {
 		"name": "Prozilla",

@@ -1,5 +1,17 @@
 # @prozilla-os/wordle
 
+## 1.2.0
+
+### Minor Changes
+
+- Improved responsiveness, added confetti and fixed keyboard input handling
+
+## 1.1.9
+
+### Patch Changes
+
+- Updated dependencies
+
 ## 1.1.8
 
 ### Patch Changes
