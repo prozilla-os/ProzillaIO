@@ -19,6 +19,9 @@ interface KeyboardProps {
 export function Keyboard({ onKeyPress, keyHighlights, gameOver }: KeyboardProps) {
 	useEffect(() => {
 		const onKeyDown = (event: KeyboardEvent) => {
+			if (event.ctrlKey || event.altKey) {
+				return;
+			}
 			event.preventDefault();
 			onKeyPress(event.key);
 		};

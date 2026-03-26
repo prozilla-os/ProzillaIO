@@ -12,14 +12,20 @@ import utilStyles from "../styles/utils.module.css";
 
 export function Wordle({ active }: WindowProps) {
 	const wordleRef = useRef<HTMLDivElement>(null);
-	const [game] = useState<Game>(new Game());
+	const gameRef = useRef<Game | null>(null);
+	if (gameRef.current == null) {
+		gameRef.current = new Game();
+	}
 	const [gameOver, setGameOver] = useState(false);
+	const [won, setWon] = useState(false);
 	const [grid, setGrid] = useState<GridType>(Game.createGrid());
 	const [keyHighlights, setKeyHighlights] = useState<Record<string, CellType["status"]>>({});
 	const [activeRowIndex, setActiveRowIndex] = useState(0);
 	const [activeCellIndex, setActiveCellIndex] = useState(0);
 	const [popup, setPopup] = useState<string | null>(null);
 	const [helpVisible, setHelpVisible] = useState(false);
+
+	const game = gameRef.current;
 
 	const moveActiveCell = useCallback((forwards: boolean) => {
 		let newCellIndex = forwards ? activeCellIndex + 1 : activeCellIndex - 1;
@@ -56,6 +62,7 @@ export function Wordle({ active }: WindowProps) {
 			if (correct) {
 				setPopup("Congratulations, you won!");
 				setGameOver(true);
+				setWon(true);
 			} else if (activeRowIndex === 5) {
 				setPopup(`You lost! The word was ${game.word.toUpperCase()}.`);
 				setGameOver(true);
@@ -89,6 +96,7 @@ export function Wordle({ active }: WindowProps) {
 		setKeyHighlights({});
 		setPopup(null);
 		setGameOver(false);
+		setWon(false);
 
 		setTimeout(() => {
 			wordleRef.current?.classList.remove(utilStyles["No-transition"]);			
@@ -117,6 +125,7 @@ export function Wordle({ active }: WindowProps) {
 			toggleHelp={toggleHelp}
 			helpVisible={helpVisible}
 			popup={popup}
+			won={won}
 		/>
 	</div>;
 }

@@ -8,6 +8,12 @@
 	font-display: swap;
 }
 
+@font-face {
+	font-family: "DM Sans";
+	src: url("/assets/fonts/dm-sans/DMSans-VariableFont_opsz,wght.ttf");
+	font-display: swap;
+}
+
 .ProzillaOS-WindowsView {
 	--taskbar-height: 0px;
 }

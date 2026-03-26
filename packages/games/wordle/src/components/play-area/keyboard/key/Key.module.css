@@ -6,6 +6,7 @@
 	padding: 0 3px;
 	font-size: 1em;
 	font-weight: bold;
+	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--border-color);
 	border: none;
