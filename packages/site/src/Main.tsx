@@ -4,6 +4,7 @@ import { ProzillaOS } from "prozilla-os";
 import { skin } from "./config/skin.config";
 import { Router } from "./router/Router";
 import "./styles/global.css";
+import { desktopConfig } from "./config/desktop.config";
 import { virtualDriveConfig } from "./config/virtualDrive.config";
 
 export function Main() {
@@ -12,7 +13,8 @@ export function Main() {
 		tagLine={TAG_LINE}
 		config={{
 			apps: appsConfig,
-			virtualDrive: virtualDriveConfig,
+			desktop: desktopConfig,
+			virtualDrive: virtualDriveConfig
 		}}
 		skin={skin}
 	>
