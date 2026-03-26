@@ -27,7 +27,7 @@
 	height: 100%;
 	font-size: 16px;
 	overflow: hidden;
-	container: wordle / inline-size;
+	container: wordle / size;
 }
 
 @container wordle (width >= 425px) {

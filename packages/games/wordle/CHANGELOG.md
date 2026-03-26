@@ -1,5 +1,11 @@
 # @prozilla-os/wordle
 
+## 1.2.1
+
+### Patch Changes
+
+- Fixed grid sizing
+
 ## 1.2.0
 
 ### Minor Changes
