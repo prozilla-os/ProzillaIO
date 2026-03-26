@@ -46,13 +46,13 @@
 	height: 100%;
 }
 
-@media screen and (max-width: 260px) {
+@container wordle (width <= 260px) {
 	.Menu .Menu-button {
 		width: 1em;
 	}
 }
 
-@media screen and (min-width: 360px) {
+@container wordle (width >= 360px) {
 	.Menu .Menu-button {
 		width: 1.5em;
 	}

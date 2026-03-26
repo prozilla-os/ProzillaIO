@@ -16,7 +16,7 @@
 	cursor: pointer;	
 }
 
-@media screen and (max-width: 260px) {
+@container wordle (width <= 260px) {
 	.Key {
 		padding: 0;
 	}
@@ -36,4 +36,10 @@
 
 .Key.Backspace {
 	padding: 0 6px;
+}
+
+@container wordle (width <= 260px) {
+	.Key {
+		padding: 0;
+	}
 }

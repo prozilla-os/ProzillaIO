@@ -30,7 +30,7 @@
 	z-index: 999;
 }
 
-@media screen and (min-width: 550px) {
+@container wordle (width >= 550px) {
 	.Help {
 		width: var(--max-width);
 		height: min-content;

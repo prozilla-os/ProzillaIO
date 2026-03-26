@@ -1,24 +1,25 @@
 .Cell {
-	width: 100%;
-	height: auto;
+    height: 100%;
+    width: auto;
 
-	display: flex;
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
 
-	color: var(--text-color);
-	border: var(--radius) solid var(--border-color);
-	border-radius: var(--radius);
-	background-color: transparent;
-	transition: background-color 900ms ease-in-out;
+    color: var(--text-color);
+    border: var(--radius) solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: transparent;
+    transition: background-color 900ms ease-in-out;
 
-	font-size: 1em;
-	font-weight: bold;
+    font-size: 1em;
+    font-weight: bold;
     text-transform: uppercase;
-
-	aspect-ratio: 1 / 1;
-	box-sizing: border-box;
-	user-select: none;
+	
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    user-select: none;
 }
 
 .Cell:not(:empty) {
@@ -67,13 +68,13 @@
 	}
 }
 
-@media screen and (min-width: 440px) {
+@container wordle (width >= 440px) {
 	.Cell {
 		font-size: 2em;
 	}
 }
 
-@media screen and (max-width: 280px) {
+@container wordle (width <= 280px) {
 	.Cell {
 		font-size: 0.75em;
 	}
