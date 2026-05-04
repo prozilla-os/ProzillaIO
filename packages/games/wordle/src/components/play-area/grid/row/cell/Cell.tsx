@@ -5,9 +5,10 @@ import styles from "./Cell.module.css";
 interface CellProps {
 	cell: CellType;
 	active: boolean;
+	onClick?: () => void;
 }
 
-export function Cell({ cell, active }: CellProps) {
+export function Cell({ cell, active, onClick }: CellProps) {
 	const classNames = [styles.Cell];
 
 	switch (cell.status) {
@@ -25,5 +26,13 @@ export function Cell({ cell, active }: CellProps) {
 	if (active)
 		classNames.push(styles.Active);
 
-	return <li className={useClassNames(classNames)}>{cell.content}</li>;
+	return (
+		<li 
+			className={useClassNames(classNames)} 
+			onClick={onClick}
+			style={onClick ? { cursor: "pointer" } : undefined}
+		>
+			{cell.content}
+		</li>
+	);
 }

@@ -4,20 +4,26 @@ import styles from "./Row.module.css";
 import { CellType } from "../../../../types/grid";
 
 interface RowProps {
-	row: CellType[];
-	active: boolean;
-	activeCellIndex: number;
+    row: CellType[];
+    active: boolean;
+    activeCellIndex: number;
+    setActiveCellIndex?: (index: number) => void;
 }
 
-export function Row({ row, active, activeCellIndex }: RowProps) {
-	const classNames = [styles.Row];
+export function Row({ row, active, activeCellIndex, setActiveCellIndex }: RowProps) {
+    const classNames = [styles.Row];
 
-	if (active)
-		classNames.push(styles.Active);
+    if (active)
+        classNames.push(styles.Active);
 
-	return <ul className={useClassNames(classNames)}>
-		{row.map((cell, cellIndex) =>
-			<Cell key={cellIndex} active={active && cellIndex == activeCellIndex} cell={cell}/>
-		)}
-	</ul>;
+    return <ul className={useClassNames(classNames)}>
+        {row.map((cell, cellIndex) =>
+            <Cell 
+                key={cellIndex} 
+                active={active && cellIndex == activeCellIndex} 
+                cell={cell}
+                onClick={active ? () => setActiveCellIndex?.(cellIndex) : undefined}
+            />
+        )}
+    </ul>;
 }

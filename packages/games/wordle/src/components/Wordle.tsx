@@ -43,7 +43,9 @@ export function Wordle({ active }: WindowProps) {
 
 		const updatedGrid = [...grid];
 		const currentRow = updatedGrid[activeRowIndex];
-		const specialKeyPressed = event === undefined ? false : event.ctrlKey || event.altKey || event.metaKey;
+		const ctrlPressed = event === undefined ? false : event.ctrlKey || event.metaKey;
+		const altPressed = event === undefined ? false : event.altKey;
+		const specialKeyPressed = ctrlPressed || altPressed;
 
 		let keyHandled = true;
 		if (key === "enter") {
@@ -79,12 +81,86 @@ export function Wordle({ active }: WindowProps) {
 				setActiveCellIndex(0);
 			}
 		} else if (key === "backspace") {
-			if (currentRow[activeCellIndex].content != "") {
-				currentRow[activeCellIndex].content = "";
-			} else if (activeCellIndex > 0) {
-				currentRow[activeCellIndex - 1].content = "";
+			if (ctrlPressed) {
+				for (let i = 0; i <= activeCellIndex; i++) {
+					currentRow[i].content = "";
+				}
+				setActiveCellIndex(0);
+			} else {
+				if (currentRow[activeCellIndex].content !== "") {
+					currentRow[activeCellIndex].content = "";
+				} else if (activeCellIndex > 0) {
+					currentRow[activeCellIndex - 1].content = "";
+					moveActiveCell(false);
+				}
+			}
+		} else if (key === "delete") {
+			if (ctrlPressed) {
+				for (let i = activeCellIndex; i < WORD_LENGTH; i++) {
+					currentRow[i].content = "";
+				}
+			} else {
+				if (currentRow[activeCellIndex].content !== "") {
+					currentRow[activeCellIndex].content = "";
+				} else if (activeCellIndex < WORD_LENGTH - 1) {
+					currentRow[activeCellIndex + 1].content = "";
+					moveActiveCell(true);
+				}
+			}
+		} else if (key === "escape") {
+			if (helpVisible) {
+				setHelpVisible(false);
+			} else {
+				currentRow.forEach(cell => {
+					cell.content = "";
+				});
+				setActiveCellIndex(0);
+			}
+		} else if (ctrlPressed && key === "v") {
+			navigator.clipboard?.readText().then((clipText) => {
+				if (!clipText)
+					return;
+				const sanitized = clipText.replace(/[^a-zA-Z]/g, "").toLowerCase();
+				if (!sanitized.length)
+					return;
+
+				const newGrid = [...grid];
+				const row = newGrid[activeRowIndex];
+				let cursor = activeCellIndex;
+
+				for (let i = 0; i < sanitized.length && cursor < WORD_LENGTH; i++) {
+					row[cursor].content = sanitized[i];
+					cursor++;
+				}
+
+				setActiveCellIndex(clamp(cursor, 0, WORD_LENGTH - 1));
+				setGrid(newGrid);
+			}).catch(() => {});
+		} else if (ctrlPressed && key === "c") {
+			const wordToCopy = Game.rowToWord(currentRow);
+			if (wordToCopy) {
+				navigator.clipboard?.writeText(wordToCopy).catch(() => {});
+			}
+		} else if (key === "arrowleft") {
+			if (ctrlPressed) {
+				setActiveCellIndex(0);
+			} else {
 				moveActiveCell(false);
 			}
+		} else if (key === "arrowright") {
+			if (ctrlPressed) {
+				setActiveCellIndex(WORD_LENGTH - 1);
+			} else {
+				moveActiveCell(true);
+			}
+		} else if (key === "home") {
+			setActiveCellIndex(0);
+		} else if (key === "end") {
+			setActiveCellIndex(WORD_LENGTH - 1);
+		} else if (key === "arrowup") {
+			setActiveCellIndex(0);
+		} else if (key === "arrowdown") {
+			setActiveCellIndex(WORD_LENGTH - 1);
 		} else if (!specialKeyPressed && key.match(/^[a-z]$/g)) {
 			currentRow[activeCellIndex].content = key;
 			updatedGrid[activeRowIndex] = currentRow;
@@ -94,12 +170,11 @@ export function Wordle({ active }: WindowProps) {
 			keyHandled = false;
 		}
 
-		if (keyHandled) {
+		if (keyHandled)
 			event?.preventDefault();
-		}
 
 		setGrid(updatedGrid);
-	}, [game, grid, activeRowIndex, activeCellIndex, keyHighlights, active, gameOver, moveActiveCell]);
+	}, [game, grid, activeRowIndex, activeCellIndex, keyHighlights, active, gameOver, moveActiveCell, helpVisible]);
 
 	const restartGame = () => {
 		wordleRef.current?.classList.add(utilStyles["No-transition"]);
@@ -131,6 +206,7 @@ export function Wordle({ active }: WindowProps) {
 			grid={grid}
 			activeRowIndex={activeRowIndex}
 			activeCellIndex={activeCellIndex}
+			setActiveCellIndex={setActiveCellIndex}
 			onKeyPress={handleKeyPress}
 			keyHighlights={keyHighlights}
 			gameOver={gameOver}
