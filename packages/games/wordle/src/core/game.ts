@@ -9,7 +9,7 @@ export class Game {
 	private validGuesses: string[];
 	private words: string[];
 	private themes: Record<string, string[]>;
-    
+	
 	constructor() {
 		this.validGuesses = [];
 		this.words = [];
@@ -62,11 +62,15 @@ export class Game {
 			}
 		});
 
-		// Mark yellow letters
+		// Mark yellow letters and handle duplicates
 		guessLetters.forEach((letter, i) => {
-			if (!result[i] && letters.includes(letter)) {
-				result[i] = 1;
-				letters[letters.indexOf(letter)] = null!;
+			if (result[i] !== 2) {
+				if (letters.includes(letter)) {
+					result[i] = 1;
+					letters[letters.indexOf(letter)] = null!;
+				} else if (this.word.includes(letter)) {
+					result[i] = null;
+				}
 			}
 		});
 

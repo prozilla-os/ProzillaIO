@@ -54,10 +54,16 @@ export function Wordle({ active }: WindowProps) {
 
 			const { status, correct } = game.checkGuess(currentRow);
 			
-			const newKeyHighlights = keyHighlights;
+			const newKeyHighlights = { ...keyHighlights };
 			currentRow.forEach((cell, index) => {
-				cell.status = status[index];
-				newKeyHighlights[cell.content] = status[index];
+				const newStatus = status[index];
+				cell.status = newStatus ?? 0;
+
+				const currentPriority = newKeyHighlights[cell.content] ?? -1;
+				const newPriority = newStatus ?? 0;
+
+				if (newPriority > currentPriority)
+					newKeyHighlights[cell.content] = newStatus ?? 0;
 			});
 			setKeyHighlights(newKeyHighlights);
 
@@ -93,7 +99,7 @@ export function Wordle({ active }: WindowProps) {
 		}
 
 		setGrid(updatedGrid);
-	}, [game, grid, activeRowIndex, activeCellIndex, keyHighlights]);
+	}, [game, grid, activeRowIndex, activeCellIndex, keyHighlights, active, gameOver, moveActiveCell]);
 
 	const restartGame = () => {
 		wordleRef.current?.classList.add(utilStyles["No-transition"]);
@@ -107,7 +113,7 @@ export function Wordle({ active }: WindowProps) {
 		setWon(false);
 
 		setTimeout(() => {
-			wordleRef.current?.classList.remove(utilStyles["No-transition"]);			
+			wordleRef.current?.classList.remove(utilStyles["No-transition"]);
 		}, 100);
 	};
 

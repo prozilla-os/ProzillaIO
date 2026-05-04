@@ -11,7 +11,6 @@ export default {
 		"tight",
 		"quick",
 		"brave",
-		"calm",
 		"eager",
 		"proud",
 	],
@@ -167,7 +166,6 @@ export default {
 		"shape",
 		"curve",
 		"angle",
-		"square",
 		"triad",
 	],
 	"sound":[
