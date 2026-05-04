@@ -1,5 +1,11 @@
 # @prozilla-os/wordle
 
+## 1.2.2
+
+### Patch Changes
+
+- Fixed guess validation + updated input system
+
 ## 1.2.1
 
 ### Patch Changes
