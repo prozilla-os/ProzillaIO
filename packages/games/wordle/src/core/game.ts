@@ -2,7 +2,7 @@ import { ROW_COUNT, WORD_LENGTH } from "../constants/data";
 import { CellType, GridType } from "../types/grid";
 import themes from "./data/words";
 import dictionary from "./data/dictionary";
-import { removeDuplicatesFromArray } from "@prozilla-os/shared";
+import { randomFromArray, removeDuplicatesFromArray } from "@prozilla-os/shared";
 
 export class Game {
 	word: string;
@@ -38,8 +38,9 @@ export class Game {
 
 	// Select a random word from the list
 	chooseRandomWord() {
-		const randIndex = Math.floor(Math.random() * this.words.length);
-		this.word = this.words[randIndex];
+		this.word = randomFromArray(this.words);
+		if (this.word.length !== 5)
+			this.chooseRandomWord();
 	}
 
 	// Process the guess and update the game state
