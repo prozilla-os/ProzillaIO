@@ -1,5 +1,11 @@
 # @prozilla-os/ball-maze
 
+## 1.0.10
+
+### Patch Changes
+
+- Updated dependencies
+
 ## 1.0.9
 
 ### Patch Changes

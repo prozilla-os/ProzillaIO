@@ -1,5 +1,11 @@
 # @prozilla-os/wordle
 
+## 1.2.4
+
+### Patch Changes
+
+- Added more words
+
 ## 1.2.3
 
 ### Patch Changes
