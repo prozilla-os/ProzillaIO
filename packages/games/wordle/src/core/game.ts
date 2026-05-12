@@ -106,5 +106,5 @@ export class Game {
 
 	static rowToWord(row: CellType[]): string {
 		return row.map(({ content }) => content).join("");
-	} 
+	}
 }

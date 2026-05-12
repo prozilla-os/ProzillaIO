@@ -2,23 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./GameGrid.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faFlag } from "@fortawesome/free-solid-svg-icons";
-
-interface CellState {
-	hasBomb: boolean;
-	revealed: boolean;
-	flagged: boolean;
-	adjacentBombs: number;
-}
+import type { BoardView } from "../../core/board";
 
 interface GameGridProps {
-	board: CellState[];
-	size: number;
+	board: BoardView;
 	onReveal: (index: number, tile: HTMLButtonElement, manualClick?: boolean) => void;
 	onToggleFlag: (index: number, tile: HTMLButtonElement) => void;
 	onRegisterTile: (index: number, tile: HTMLButtonElement | null) => void;
 }
 
-export function GameGrid({ board, size, onReveal, onToggleFlag, onRegisterTile }: GameGridProps) {
+export function GameGrid({ board, onReveal, onToggleFlag, onRegisterTile }: GameGridProps) {
+	const { size, cells } = board;
 	const holdTimeout = useRef<number | null>(null);
 	const holdCompleted = useRef<boolean>(false);
 	const mainRef = useRef<HTMLElement | null>(null);
@@ -69,7 +63,7 @@ export function GameGrid({ board, size, onReveal, onToggleFlag, onRegisterTile }
 				className={styles.Grid}
 				style={gridStyle}
 			>
-				{board.map((cell, index) => {
+				{cells.map((cell, index) => {
 					const x = index % size;
 					const y = Math.floor(index / size);
 					const odd = x % 2 === y % 2;

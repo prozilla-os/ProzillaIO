@@ -16,7 +16,7 @@ importers:
         version: 9.15.9
       prozilla-os:
         specifier: 2.0.1
-        version: 2.0.1(@fortawesome/fontawesome-svg-core@7.2.0)(@types/react@18.3.28)(react@18.3.1)
+        version: 2.0.1(@fortawesome/fontawesome-svg-core@6.7.2)(@types/react@18.3.28)(react@18.3.1)
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
@@ -115,9 +115,15 @@ importers:
       '@prozilla-os/core':
         specifier: ^2.0.2
         version: 2.0.2(@types/react@18.3.28)(react@18.3.1)
+      '@prozilla-os/shared':
+        specifier: ^1.3.0
+        version: 1.3.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
+      valtio:
+        specifier: ^2.3.2
+        version: 2.3.2(@types/react@18.3.28)(react@18.3.1)
     devDependencies:
       '@prozilla-os/dev-tools':
         specifier: ^1.1.14
@@ -4526,20 +4532,6 @@ snapshots:
       - '@fortawesome/fontawesome-svg-core'
       - '@types/react'
 
-  '@prozilla-os/text-editor@1.1.22(@fortawesome/fontawesome-svg-core@7.2.0)(@types/react@18.3.28)':
-    dependencies:
-      '@fortawesome/free-solid-svg-icons': 7.2.0
-      '@fortawesome/react-fontawesome': 3.3.1(@fortawesome/fontawesome-svg-core@7.2.0)(react@18.3.1)
-      '@prozilla-os/core': 2.0.2(@types/react@18.3.28)(react@18.3.1)
-      '@prozilla-os/shared': 1.3.0
-      '@prozilla-os/skins': 1.1.9(react@18.3.1)
-      markdown-to-jsx: 7.7.17(react@18.3.1)
-      react: 18.3.1
-      react-syntax-highlighter: 15.6.6(react@18.3.1)
-    transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@types/react'
-
   '@remix-run/router@1.23.2': {}
 
   '@rolldown/pluginutils@1.0.0-beta.27': {}
@@ -6620,24 +6612,6 @@ snapshots:
       '@prozilla-os/skins': 1.1.9(react@18.3.1)
       '@prozilla-os/terminal': 2.0.1(@types/react@18.3.28)
       '@prozilla-os/text-editor': 1.1.22(@fortawesome/fontawesome-svg-core@6.7.2)(@types/react@18.3.28)
-      react: 18.3.1
-    transitivePeerDependencies:
-      - '@fortawesome/fontawesome-svg-core'
-      - '@types/react'
-
-  prozilla-os@2.0.1(@fortawesome/fontawesome-svg-core@7.2.0)(@types/react@18.3.28)(react@18.3.1):
-    dependencies:
-      '@prozilla-os/app-center': 1.0.15(@types/react@18.3.28)
-      '@prozilla-os/browser': 1.1.22(@types/react@18.3.28)
-      '@prozilla-os/calculator': 1.1.22(@types/react@18.3.28)
-      '@prozilla-os/core': 2.0.2(@types/react@18.3.28)(react@18.3.1)
-      '@prozilla-os/file-explorer': 1.1.22(@types/react@18.3.28)
-      '@prozilla-os/media-viewer': 1.1.22(@types/react@18.3.28)
-      '@prozilla-os/settings': 1.1.23(@types/react@18.3.28)
-      '@prozilla-os/shared': 1.3.0
-      '@prozilla-os/skins': 1.1.9(react@18.3.1)
-      '@prozilla-os/terminal': 2.0.1(@types/react@18.3.28)
-      '@prozilla-os/text-editor': 1.1.22(@fortawesome/fontawesome-svg-core@7.2.0)(@types/react@18.3.28)
       react: 18.3.1
     transitivePeerDependencies:
       - '@fortawesome/fontawesome-svg-core'
