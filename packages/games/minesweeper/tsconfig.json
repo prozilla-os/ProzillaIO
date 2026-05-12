@@ -8,6 +8,6 @@
 		"emitDeclarationOnly": true,
 		"noEmit": false,
 	},
-	"include": ["src", "vite.config.ts"],
-	"exclude": ["node_modules"],
+	"include": ["src", "vite.config.ts", "./src/data/*.json"],
+	"exclude": ["node_modules"]
 }

@@ -1,0 +1,83 @@
+.Main {
+	display: flex;
+	justify-content: center;
+	height: calc(100% - var(--header-height));
+}
+
+.Grid {
+	display: grid;
+	background-color: var(--grass-a);
+}
+
+.Tile {
+	position: relative;
+	appearance: none;
+	-webkit-appearance: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	aspect-ratio: 1;
+	background-color: var(--grass-a);
+	z-index: 1;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+	touch-action: manipulation;
+	line-height: normal;
+	font-size: calc(var(--icon-size) * 2);
+	font-weight: 900;
+	color: var(--blue);
+	font-family: var(--font-family);
+}
+
+.Odd {
+	background-color: var(--grass-b);
+}
+
+.Tile:not(.Dug) {
+	cursor: pointer;
+}
+
+.Tile:not(.Dug):hover {
+	background-color: var(--grass-hover);
+}
+
+.Dug {
+	background-color: var(--sand-a);
+}
+
+.Dug.Odd {
+	background-color: var(--sand-b);
+}
+
+.Dug,
+.Bomb,
+.Flag {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Bomb {
+	background-color: var(--background-color-c) !important;
+}
+
+.BombIcon {
+	color: var(--background-color-b);
+	fill: var(--background-color-b);
+	font-size: calc(var(--icon-size) * 1.5);
+}
+
+.FlagIcon {
+	color: var(--red);
+	fill: var(--red);
+	font-size: calc(var(--icon-size) * 1.25);
+}
+
+.BombIcon path {
+	fill: var(--background-color-b);
+}
+
+.FlagIcon path {
+	fill: var(--red);
+}

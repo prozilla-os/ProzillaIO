@@ -1,9 +1,7 @@
-import { AppsConfig, Vector2 } from "@prozilla-os/core";
+import { AppsConfig, settings, fileExplorer } from "prozilla-os";
 import { minesweeper } from "@prozilla-os/minesweeper";
 import { wordle } from "@prozilla-os/wordle";
 import { ballMaze } from "@prozilla-os/ball-maze";
-import { settings } from "@prozilla-os/settings";
-import { fileExplorer } from "@prozilla-os/file-explorer";
 
 const games = [
 	minesweeper,

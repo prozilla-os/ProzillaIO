@@ -1,10 +1,8 @@
-import { App, Vector2, WebView, WindowProps } from "@prozilla-os/core";
+import { App, Vector2, WindowProps } from "@prozilla-os/core";
 import iconSvg from "../public/icon.svg";
+import { Minesweeper } from "./components/Minesweeper";
 
-interface MinesweeperProps extends WindowProps {};
-
-const minesweeper = new App<MinesweeperProps>("Minesweeper", "minesweeper", WebView, {
-	source: "https://prozilla.dev/minesweeper",
+const minesweeper = new App<WindowProps>("Minesweeper", "minesweeper", Minesweeper, {
 	size: new Vector2(500, 580)
 });
 

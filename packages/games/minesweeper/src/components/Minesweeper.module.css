@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@400;600;700&display=swap");
+
+.Palette {
+	--text-color: #fff;
+	--background-color-a: #4bcffa;
+	--background-color-b: #1e272e;
+	--background-color-c: #485460;
+	--red: #ff5e57;
+	--yellow: #ffc048;
+	--green: #0be881;
+	--blue: #575fcf;
+	--grass-hover: #3cf69f;
+	--grass-a: #0be881;
+	--grass-b: #05c46b;
+	--sand-a: #ffdd59;
+	--sand-b: #ffd32a;
+	--font-family: "Akshar", sans-serif;
+	--header-height: 75px;
+	--grid-margin: 50px;
+	--flag: "\f024";
+	--bomb: "\f111";
+	color: var(--text-color);
+	background-color: var(--background-color-a);
+	font-family: var(--font-family);
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.ParticlesCanvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: 999;
+}
